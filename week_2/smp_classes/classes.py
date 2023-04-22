@@ -2,7 +2,7 @@ class Student:
     def __init__(self, name: str, grades: list):
         self.name = name
         self.grades = list(grades)
-
+    
     def __str__(self):
         return f"{self.name}"
 
@@ -19,18 +19,13 @@ class Student:
         return sum(self.grades) / len(self.grades)
 
     def achieve_BSA(self):
-        average_grade = self.calc_average()
-        return average_grade > 5.5
-
+        num_good_grades = sum(grade > 5.5 for grade in self.grades)
+        percentage_good_grades = num_good_grades / len(self.grades)
+        return percentage_good_grades >= 0.75
 
 Pieter = Student("Pieter", [6.0, 7.0, 8.0])
 Jimmy = Student("Jimmy", [5.0, 4.0, 3.0])
-Jack = Student("Jack", [6.0, 7.0, 8.0])
-
-# Pieter.add_grade(6.0)
-print(Pieter.get_grades())
-print("Here's the BSA: ", Pieter.achieve_BSA())
-
+Jack = Student("Jack", [5.0, 7.0, 8.0])
 
 class Course:
     def __init__(self, name: str, students: list):
@@ -56,12 +51,13 @@ class Course:
         print("The folowing students did not achieve the BSA:, negative_BSA")
         return negative_BSA
 
-
 Biology = Course("Biology", [Pieter, Jimmy, Jack])
 
 Biology.add_student(Pieter)
 Biology.add_student(Jimmy)
 Biology.add_student(Jack)
+
+
 
 
 class Faculty:

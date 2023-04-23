@@ -57,11 +57,23 @@ Biology.check_studentBSA()
 class Faculty:
     def __init__(self, name: str, courses: list):
         self.name = name
-        self.courses = []
+        self.courses = [] if courses is None else courses
 
-    def addCourse(self, Course):
+    def add_course(self, Course):
         self.courses.append(Course)
 
-    def calcAverage(self):
+    def calc_average(self):
         average = sum(self.courses) / len(self.courses)
         return average
+
+    def get_excellence(self, Course):
+        excellence = []
+        for course in self.courses:
+            for student in course.students:
+                print("Idaho")
+
+faculty = Faculty("Science", [Biology])
+
+
+
+faculty.get_excellence(Biology.students)

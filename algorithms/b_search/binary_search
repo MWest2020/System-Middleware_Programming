@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import sys
+
+
+def binary_search(needle, haystack) -> int:
+    # Set the left and right boundaries.
+    left, right = 0, len(haystack) - 1
+    while left <= right:
+        # Find the middle of the haystack.
+        middle = (left + right) // 2
+        # Check if the needle is in the middle.
+        if needle == haystack[middle]:
+            return middle
+        # Check if the needle is in the left half.
+        elif needle < haystack[middle]:
+            right = middle - 1
+        # Check if the needle is in the right half.
+        else:
+            left = middle + 1
+    return -1

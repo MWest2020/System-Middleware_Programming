@@ -1,11 +1,22 @@
 import csv
 
-with open('kids_EU.csv', 'r') as f:
-    reader = csv.Dictreader(f)
-    for row in reader:
-
-
 # Read all data and store in dictionary (key = name, value = data(?)    )
+def csv_to_dict(filename):
+    result = []
+
+    with open('kids_EU.csv', 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            # 
+            result.append(dict(row))
+    
+    return result;
+
+print(csv_to_dict('kids_EU.csv'))
+
+
+
+
 
 # Assign each kid a present or charcoal
 

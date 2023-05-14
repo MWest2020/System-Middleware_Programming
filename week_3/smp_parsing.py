@@ -18,8 +18,6 @@ def copy_csv_to_txt(csv_file_path, txt_file_path):
             for row in reader:
                 txt_file.write('\t'.join(row) + '\n')
 
-copy_csv_to_txt('output.csv', 'output.txt')
-
 def read_file(filename):
     with open(filename, 'r') as f:
         return f.read()
@@ -38,7 +36,7 @@ command_list = get_command_dicts(command_list)
 
 
 
-def process_text(file_name):
+def process_integers_text(file_name):
     with open(file_name, 'r') as file:
         lines = file.readlines()
 
@@ -66,23 +64,66 @@ def strip_text(file_name):
         if re.search(r'\d+', line):
             processed_lines.append(line)
         
-
     # overwrite output text file
     with open(file_name, 'w') as file:
         file.writelines(processed_lines)
 
-
+def sum_integers(file_name):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+    
+    numbers = []
+    for line in lines:
+        if re.search(r'\d+', line):
+            numbers.append(int(line))
+    return sum(numbers)
 
 # Example usage:
 file_name = 'output.txt'
-process_text(file_name)
+copy_csv_to_txt('output.csv', 'output.txt')
+process_integers_text(file_name)
 strip_text(file_name)
 read_file(file_name)
 
+def size_to_dict(file_name, commands_list):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+
+    processed_lines = []
+    numbers_buffer = []
+
+    # Flatten the list of dictionaries into a set of command strings
+    commands = set()
+    for command_dict in commands_list:
+        commands.update(command_dict.values())
+
+    for line in lines:
+        line = line.strip()
+
+        # Check for a command from the flattened set
+        if line in commands:
+            # Append buffered numbers to the previous line if it's not empty
+            if numbers_buffer:
+                processed_lines.append(''.join(numbers_buffer))
+                numbers_buffer = []
+
+            processed_lines.append(line)
+        elif re.search(r'\d', line):
+            # Add numbers to buffer
+            numbers_buffer.append(line)
+        else:
+            # Empty the numbers buffer if a non-integer line is encountered
+            numbers_buffer = []
+
+    # Append buffered numbers if any remain at the end
+    if numbers_buffer:
+        processed_lines.append(''.join(numbers_buffer))
+
+    with open(file_name, 'w') as file:
+        file.writelines('\n'.join(processed_lines))
 
 
+# size_to_dict(file_name, command_list)
 
 
-
-# print(command_list)
 

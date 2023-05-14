@@ -5,8 +5,8 @@
     "payload": "Beautiful is better than ugly.\nExplicit is better than implicit.\n",
     "src_ip": "192.168.4.1",
     "src_port": 20,
-    "dst_ip": "145.18.11.151",
-    "dst_port": 443
+    "dest_ip": "145,18,11,151",
+    "dest_port": 443
   },
   {
     "src_ip": "192,168,4,1   ",
@@ -39,10 +39,10 @@
     "timestamp": " 2022-07-04 16:07:39 ",
     "msg_no": 4,
     "payload": "se is better than dense.\n",
-    "src_ip": "192.168.4.1",
+    "src_ip": "192,168,4,1",
     "src_port": 20,
-    "dst_ip": "145.18.11.151",
-    "dst_port": 443
+    "dest_ip": "145,18,11,151",
+    "dest_port": 443
   },
   {
     "src_ip": " 192,168,4,1  ",
@@ -75,10 +75,10 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 8,
     "payload": "Special cases aren't special",
-    "src_ip": "192.168.4.1",
+    "src_ip": "192,168,4,1",
     "src_port": 20,
-    "dst_ip": "145.18.11.151",
-    "dst_port": 443
+    "dest_ip": "145,18,11,151",
+    "dest_port": 443
   },
   {
     "src_ip": "   192,168,4,1",
@@ -156,19 +156,19 @@
     "timestamp": " 2022-07-04 16:07:39",
     "msg_no": 17,
     "payload": "Although that way may not",
-    "src_ip": "192.168.4.1",
+    "src_ip": "192,168,4,1",
     "src_port": 20,
-    "dst_ip": "145.18.11.151",
-    "dst_port": 443
+    "dest_ip": "145,18,11,151",
+    "dest_port": 443
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 18,
     "payload": " be obvious at first unless you're Dutch.\n",
-    "src_ip": "192.168.4.1",
+    "src_ip": "192,168,4,1",
     "src_port": 20,
-    "dst_ip": "145.18.11.151",
-    "dst_port": 443
+    "dest_ip": "145,18,11,151",
+    "dest_port": 443
   },
   {
     "src_ip": " 192,168,4,1",
@@ -228,10 +228,10 @@
     "timestamp": "2022-07-04 16:07:39  ",
     "msg_no": 5,
     "payload": "Execute ",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 66,
-    "dst_ip": "106.101.100.105",
-    "dst_port": 66
+    "dest_ip": "106.101.100.105",
+    "dest_port": 66
   },
   {
     "src_ip": "115,105,116,104   ",
@@ -273,10 +273,10 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 10,
     "payload": "Executing order 66.",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 66,
-    "dst_ip": "106.101.100.105",
-    "dst_port": 66
+    "dest_ip": "106,101,100,105",
+    "dest_port": 66
   },
   {
     "src_ip": "  115,105,116,104   ",
@@ -327,10 +327,10 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 7,
     "payload": "u ",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 1137,
-    "dst_ip": "106.101.100.105",
-    "dst_port": 286
+    "dest_ip": "106,101,100,105",
+    "dest_port": 286
   },
   {
     "src_ip": "115,105,116,104  ",
@@ -345,19 +345,19 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 9,
     "payload": " looking for.",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 1137,
-    "dst_ip": "106.101.100.105",
-    "dst_port": 286
+    "dest_ip": "106,101,100,105",
+    "dest_port": 286
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 0,
     "payload": "Death Star ",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 1137,
-    "dst_ip": "98.97.115.101",
-    "dst_port": 80
+    "dest_ip": "98,97,115,101",
+    "dest_port": 80
   },
   {
     "src_ip": "  115,105,116,104 ",
@@ -372,10 +372,10 @@
     "timestamp": "   2022-07-04 16:07:39 ",
     "msg_no": 2,
     "payload": " base.",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 1137,
-    "dst_ip": "98.97.115.101",
-    "dst_port": 80
+    "dest_ip": "98,97,115,101",
+    "dest_port": 80
   },
   {
     "src_ip": "115,105,116,104  ",
@@ -399,10 +399,10 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 5,
     "payload": " closed",
-    "src_ip": "115.105.116.104",
+    "src_ip": "115,105,116,104",
     "src_port": 1137,
-    "dst_ip": "98.97.115.101",
-    "dst_port": 80
+    "dest_ip": "98,97,115,101",
+    "dest_port": 80
   },
   {
     "src_ip": " 115,105,116,104 ",
@@ -480,10 +480,10 @@
     "timestamp": "  2022-07-04 16:07:39  ",
     "msg_no": 4,
     "payload": "op zoek te gaan naar potentieel ",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "src_ip": " 145,18,11,151",
@@ -534,28 +534,28 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 10,
     "payload": "en algoritmen. Deze pas je toe op een g",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 11,
     "payload": "estructureerde, analytische wijze, waarbij je leert anticiperen op uitzonderingen. \n",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 12,
     "payload": "Het kunnen lezen en schrij",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "src_ip": " 145,18,11,151 ",
@@ -588,10 +588,10 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 16,
     "payload": "s",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "src_ip": "145,18,11,151  ",
@@ -606,19 +606,19 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 18,
     "payload": " van netwerkinformatie zijn fundamentele vaar",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 19,
     "payload": "digheden waar je je carri\u00e8re als cyberse",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "src_ip": "  145,18,11,151 ",
@@ -633,10 +633,10 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 21,
     "payload": "die in alle vakgebieden terugkomen.",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 443,
-    "dst_ip": "127.0.0.1",
-    "dst_port": 80
+    "dest_ip": "127,0,0,1",
+    "dest_port": 80
   },
   {
     "src_ip": " 145.18.11.151",
@@ -651,10 +651,10 @@
     "timestamp": "  2022-07-04 16:07:39   ",
     "msg_no": 1006,
     "payload": "Ehh.. What?",
-    "src_ip": "145.18.11.151",
+    "src_ip": "145,18,11,151",
     "src_port": 66,
-    "dst_ip": "115.105.116.104",
-    "dst_port": 66
+    "dest_ip": "115,105,116,104",
+    "dest_port": 66
   },
   {
     "src_ip": "   145,18,11,151   ",

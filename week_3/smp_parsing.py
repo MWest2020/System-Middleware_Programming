@@ -45,15 +45,20 @@ def write_csv_to_list(filename):
 
 new_list = write_csv_to_list('output.csv')
 
+def get_command(command, string, pattern ):
+    if command.startswith(string):
+        pattern = pattern
+        command = command
+        match = re.findall(pattern, command)
 
-
-
-
+        return match
+        
+    
 
 
 # write a fuction that returns the name and size of the biggest folder
 def find_largest_directory(csv_file):
-    directories = {}
+    directories = []
     largest_size = 0
     largest_directory = ""
 
@@ -65,23 +70,12 @@ def find_largest_directory(csv_file):
         for row in csv_reader:
             command = row[0].strip()
 
-            if command.startswith("$ cd"):
-
-
-                pattern = r'\$ cd [a-z]+'
-
-                command = command
-                match = re.match(pattern, command)
-
-                if match:
-                    print(match.group())
+            match = get_command(command, "$ cd", r'\$ cd [a-z]+')
+            directories.append(match)    
+            filtered_directories = list(filter(None, directories))
                 
 
-                
-
-
-
-
+        print(filtered_directories)
 
 
 

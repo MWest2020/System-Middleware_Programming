@@ -1,101 +1,88 @@
 #!/usr/bin/env python3
 
-import csv
 import re
+import csv
 
+csv_file= 'output.csv'
 
-# read from csv and print line by line
-
-def read_csv_and_print(filename):
+def content_to_dict(filename):
     with open(filename, 'r') as f:
         reader = csv.DictReader(f)
-        
-        for row in reader:
-            print(row)
-
-# read_csv_and_print('output.csv')
-
-# from dict to list. -- why? 
-def from_dict_make_list(filename):
-    result = []
+        return list(reader)
     
+def copy_csv_to_txt(csv_file_path, txt_file_path):
+    with open(csv_file_path, 'r', newline='') as csv_file:
+        reader = csv.reader(csv_file)
+        
+        with open(txt_file_path, 'w') as txt_file:
+            for row in reader:
+                txt_file.write('\t'.join(row) + '\n')
+
+copy_csv_to_txt('output.csv', 'output.txt')
+
+def read_file(filename):
     with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
-    
-        for row in reader:
-            result.append([value for value in row.values()])
-    
-    return result
+        return f.read()
 
-# list = from_dict_make_list('output.csv')
-# print(list)
+def get_commands(pattern, text):
+    return re.findall(pattern, text)
 
-def write_csv_to_list(filename):
-    result = []
+command_list = get_commands(r'\$ cd \w+', read_file('output.txt'))
+
+
+def get_command_dicts(list):
+    return [dict(command=command) for command in list]
+
+command_list = get_command_dicts(command_list)
+
+
+
+
+def process_text(file_name):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+
+    # process lines with both integer and strip string
+    processed_lines = []
+    for line in lines:
+        if re.search(r'\d', line) and re.search(r'[a-zA-Z]', line):
+            numbers = re.findall(r'\d+', line)
+            line = '\n'.join(numbers) + '\n'
+        processed_lines.append(line)
+
+    # overwrite output text file
+    with open(file_name, 'w') as file:
+        file.writelines(processed_lines)
+
+def strip_text(file_name):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
     
-    with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
+    processed_lines = []
+
+    for line in lines:
+        if re.search(r'\$ cd \w+', line):
+            processed_lines.append(line)
+        if re.search(r'\d+', line):
+            processed_lines.append(line)
         
-        for row in reader:
-            
-            result.append(row)
-    
-    return result
 
-
-new_list = write_csv_to_list('output.csv')
-
-def get_command(command, string, pattern ):
-    if command.startswith(string):
-        pattern = pattern
-        command = command
-        match = re.findall(pattern, command)
-
-        return match
-        
-    
-
-
-# write a fuction that returns the name and size of the biggest folder
-def find_largest_directory(csv_file):
-    directories = []
-    largest_size = 0
-    largest_directory = ""
-
-    with open(csv_file, 'r') as file:
-        csv_reader = csv.reader(file)
-        current_directory = "/"
-        current_size = 0
-
-        for row in csv_reader:
-            command = row[0].strip()
-
-            match = get_command(command, "$ cd", r'\$ cd [a-z]+')
-            directories.append(match)    
-            filtered_directories = list(filter(None, directories))
-                
-
-        print(filtered_directories)
+    # overwrite output text file
+    with open(file_name, 'w') as file:
+        file.writelines(processed_lines)
 
 
 
-            # elif command.startswith("ls") or command.startswith("dir"):
-            #     parts = command.split(" ")
-            #     if len(parts) >= 2:
-            #         try:
-            #             size = int(parts[1])
-            #             filename = " ".join(parts[2:])
-            #         except ValueError:
-            #             continue
-            #         current_size += size
-
-            #         if current_size > largest_size:
-            #             largest_size = current_size
-            #             largest_directory = current_directory
-
-    return largest_size, largest_directory
+# Example usage:
+file_name = 'output.txt'
+process_text(file_name)
+strip_text(file_name)
+read_file(file_name)
 
 
-largest_size, largest_directory = find_largest_directory('output.csv')
-print("Largest Size:", largest_size)
-print("Largest Directory:", largest_directory)
+
+
+
+
+# print(command_list)
+

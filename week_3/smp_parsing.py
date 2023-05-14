@@ -85,12 +85,12 @@ process_integers_text(file_name)
 strip_text(file_name)
 read_file(file_name)
 
-def size_to_dict(file_name, commands_list):
+def accumulate_size(file_name, commands_list):
     with open(file_name, 'r') as file:
         lines = file.readlines()
 
     processed_lines = []
-    numbers_buffer = []
+    numbers_sum = 0
 
     # Flatten the list of dictionaries into a set of command strings
     commands = set()
@@ -103,27 +103,48 @@ def size_to_dict(file_name, commands_list):
         # Check for a command from the flattened set
         if line in commands:
             # Append buffered numbers to the previous line if it's not empty
-            if numbers_buffer:
-                processed_lines.append(''.join(numbers_buffer))
-                numbers_buffer = []
+            if numbers_sum > 0:
+                
+                processed_lines.append(str(numbers_sum))
+                numbers_sum = 0
 
             processed_lines.append(line)
         elif re.search(r'\d', line):
             # Add numbers to buffer
-            numbers_buffer.append(line)
+            numbers_sum += int(line)
         else:
             # Empty the numbers buffer if a non-integer line is encountered
-            numbers_buffer = []
+            numbers_sum = 0
 
     # Append buffered numbers if any remain at the end
-    if numbers_buffer:
-        processed_lines.append(''.join(numbers_buffer))
+    if numbers_sum > 0:
+        processed_lines.append(''.join(str(processed_lines)))
 
     with open(file_name, 'w') as file:
         file.writelines('\n'.join(processed_lines))
 
 
-# size_to_dict(file_name, command_list)
+accumulate_size(file_name, command_list)
 
+def get_largest_directory(file_name):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
 
+    largest_number = None
+    largest_number_index = None
 
+    for i, line in enumerate(lines):
+        line = line.strip()
+
+        if re.match(r'^\d+$', line):
+            number = int(line)
+
+            if largest_number is None or number > largest_number:
+                largest_number = number
+                largest_number_index = i
+
+    if largest_number_index is not None:
+        command = lines[largest_number_index - 1].strip()
+        print(f"The largest number is {largest_number}, and the command above it is '{command}'")
+
+get_largest_directory(file_name)

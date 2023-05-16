@@ -2,11 +2,11 @@
 import json
 
 class DataProcessor:
-   
+    
     # No need for self as argument
-    @staticmethod
-    def read_json(file_path):
-        with open() as f:
+    # @staticmethod
+    def read_json(self, file_path):
+        with open(file_path, 'r') as f:
             data = json.load(f)
             return data
         

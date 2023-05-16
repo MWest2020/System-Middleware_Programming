@@ -12,12 +12,19 @@ def test_exceptions():
 def strip(s: str) -> str:
     return s.strip()
 
-def test_strip():
+def test_strip_both_sides():
+    print('test_strip_both_sides')
     # test both sides
     assert strip('  hello  ') == 'hello'
+
+def test_strip_left_side():
     #  test left side
     assert strip('  hello') == 'hello'
+
+def test_strip_right_side():
     # test right side
     assert strip('hello  ') == 'hello'
+
+def test_strip_no_spaces():
     # test no spaces
     assert strip('hello') == 'hello'

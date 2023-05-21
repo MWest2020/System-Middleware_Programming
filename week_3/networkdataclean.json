@@ -1,16 +1,16 @@
 [
   {
-    "timestamp": "   2022-07-04 16:07:39   ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 0,
     "payload": "Beautiful is better than ugly.\nExplicit is better than implicit.\n",
     "src_ip": "192.168.4.1",
     "src_port": 20,
-    "dest_ip": "145,18,11,151",
+    "dest_ip": "145.18.11.151",
     "dest_port": 443
   },
   {
-    "src_ip": "192,168,4,1   ",
-    "dest_ip": "  145,18,11,151  ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -18,8 +18,8 @@
     "payload": "Simple is better"
   },
   {
-    "src_ip": "   192,168,4,1 ",
-    "dest_ip": " 145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -27,8 +27,8 @@
     "payload": " than complex.\n"
   },
   {
-    "src_ip": "   192,168,4,1  ",
-    "dest_ip": "   145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -36,17 +36,17 @@
     "payload": "Complex is better than complicated.\nFlat is better than nested.\nSpar"
   },
   {
-    "timestamp": " 2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 4,
     "payload": "se is better than dense.\n",
-    "src_ip": "192,168,4,1",
+    "src_ip": "192.168.4.1",
     "src_port": 20,
-    "dest_ip": "145,18,11,151",
+    "dest_ip": "145.18.11.151",
     "dest_port": 443
   },
   {
-    "src_ip": " 192,168,4,1  ",
-    "dest_ip": "145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -54,8 +54,8 @@
     "payload": "R"
   },
   {
-    "src_ip": "192,168,4,1  ",
-    "dest_ip": " 145,18,11,151 ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -63,8 +63,8 @@
     "payload": "ead"
   },
   {
-    "src_ip": "  192,168,4,1",
-    "dest_ip": " 145,18,11,151",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -75,14 +75,14 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 8,
     "payload": "Special cases aren't special",
-    "src_ip": "192,168,4,1",
+    "src_ip": "192.168.4.1",
     "src_port": 20,
-    "dest_ip": "145,18,11,151",
+    "dest_ip": "145.18.11.151",
     "dest_port": 443
   },
   {
-    "src_ip": "   192,168,4,1",
-    "dest_ip": "   145,18,11,151 ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -90,8 +90,8 @@
     "payload": "enough to break the rules.\n"
   },
   {
-    "src_ip": " 192,168,4,1  ",
-    "dest_ip": "   145,18,11,151  ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -99,8 +99,8 @@
     "payload": "Although pract"
   },
   {
-    "src_ip": "  192,168,4,1  ",
-    "dest_ip": "   145,18,11,151",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -108,8 +108,8 @@
     "payload": "icality beats purity.\n"
   },
   {
-    "src_ip": " 192,168,4,1",
-    "dest_ip": "  145,18,11,151",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -117,17 +117,17 @@
     "payload": "Errors should never pass silently.\n"
   },
   {
-    "src_ip": "   192,168,4,1  ",
-    "dest_ip": "   145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
-    "timestamp": "  2022-07-04 16:07:39   ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 13,
     "payload": "Unless"
   },
   {
-    "src_ip": "192,168,4,1  ",
-    "dest_ip": " 145,18,11,151  ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -135,8 +135,8 @@
     "payload": " explicitly silenc"
   },
   {
-    "src_ip": "   192,168,4,1  ",
-    "dest_ip": " 145,18,11,151",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -144,8 +144,8 @@
     "payload": "ed.\n"
   },
   {
-    "src_ip": "  192,168,4,1",
-    "dest_ip": "145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -153,26 +153,26 @@
     "payload": "In the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\n"
   },
   {
-    "timestamp": " 2022-07-04 16:07:39",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 17,
     "payload": "Although that way may not",
-    "src_ip": "192,168,4,1",
+    "src_ip": "192.168.4.1",
     "src_port": 20,
-    "dest_ip": "145,18,11,151",
+    "dest_ip": "145.18.11.151",
     "dest_port": 443
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 18,
     "payload": " be obvious at first unless you're Dutch.\n",
-    "src_ip": "192,168,4,1",
+    "src_ip": "192.168.4.1",
     "src_port": 20,
-    "dest_ip": "145,18,11,151",
+    "dest_ip": "145.18.11.151",
     "dest_port": 443
   },
   {
-    "src_ip": " 192,168,4,1",
-    "dest_ip": "   145,18,11,151 ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -180,17 +180,17 @@
     "payload": "Now is better than never.\n"
   },
   {
-    "src_ip": " 192,168,4,1  ",
-    "dest_ip": "145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
-    "timestamp": "  2022-07-04 16:07:39   ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 20,
     "payload": "Although never is often better"
   },
   {
-    "src_ip": "   192,168,4,1 ",
-    "dest_ip": "  145,18,11,151  ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -198,17 +198,17 @@
     "payload": " than *right* now.\n"
   },
   {
-    "src_ip": " 192,168,4,1",
-    "dest_ip": "  145,18,11,151  ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
-    "timestamp": " 2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 22,
     "payload": "If the implementation is hard to explain, it's a bad idea.\n"
   },
   {
-    "src_ip": " 192,168,4,1 ",
-    "dest_ip": "   145,18,11,151",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
     "timestamp": "2022-07-04 16:07:39",
@@ -216,44 +216,44 @@
     "payload": "If the implementation is easy to explain, it may be a good idea.\n"
   },
   {
-    "src_ip": "  192,168,4,1   ",
-    "dest_ip": " 145,18,11,151   ",
+    "src_ip": "192.168.4.1",
+    "dest_ip": "145.18.11.151",
     "src_port": 20,
     "dest_port": 20,
-    "timestamp": " 2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 24,
     "payload": "Namespaces are one honking great idea -- let's do more of those!\n"
   },
   {
-    "timestamp": "2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 5,
     "payload": "Execute ",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 66,
     "dest_ip": "106.101.100.105",
     "dest_port": 66
   },
   {
-    "src_ip": "115,105,116,104   ",
-    "dest_ip": " 106,101,100,105 ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 66,
     "dest_port": 66,
-    "timestamp": "   2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 6,
     "payload": " "
   },
   {
-    "src_ip": "   115,105,116,104   ",
-    "dest_ip": " 106,101,100,105  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 66,
     "dest_port": 66,
-    "timestamp": "  2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 7,
     "payload": "Order "
   },
   {
-    "src_ip": "  115,105,116,104 ",
-    "dest_ip": "106,101,100,105  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 66,
     "dest_port": 66,
     "timestamp": "2022-07-04 16:07:39",
@@ -261,8 +261,8 @@
     "payload": " "
   },
   {
-    "src_ip": "   115,105,116,104   ",
-    "dest_ip": "106,101,100,105   ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 66,
     "dest_port": 66,
     "timestamp": "2022-07-04 16:07:39",
@@ -273,14 +273,14 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 10,
     "payload": "Executing order 66.",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 66,
-    "dest_ip": "106,101,100,105",
+    "dest_ip": "106.101.100.105",
     "dest_port": 66
   },
   {
-    "src_ip": "  115,105,116,104   ",
-    "dest_ip": "  106,101,100,105",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -288,8 +288,8 @@
     "payload": "These are "
   },
   {
-    "src_ip": " 115,105,116,104",
-    "dest_ip": " 106,101,100,105 ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -297,8 +297,8 @@
     "payload": "not"
   },
   {
-    "src_ip": " 115,105,116,104 ",
-    "dest_ip": "106,101,100,105",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -306,8 +306,8 @@
     "payload": " the orders"
   },
   {
-    "src_ip": " 115,105,116,104  ",
-    "dest_ip": " 106,101,100,105  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -315,11 +315,11 @@
     "payload": " y"
   },
   {
-    "src_ip": "115,105,116,104   ",
-    "dest_ip": "  106,101,100,105   ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 1137,
     "dest_port": 1137,
-    "timestamp": "  2022-07-04 16:07:39",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 6,
     "payload": "o"
   },
@@ -327,17 +327,17 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 7,
     "payload": "u ",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 1137,
-    "dest_ip": "106,101,100,105",
+    "dest_ip": "106.101.100.105",
     "dest_port": 286
   },
   {
-    "src_ip": "115,105,116,104  ",
-    "dest_ip": "  106,101,100,105   ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "106.101.100.105",
     "src_port": 1137,
     "dest_port": 1137,
-    "timestamp": "  2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 8,
     "payload": "are"
   },
@@ -345,23 +345,23 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 9,
     "payload": " looking for.",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 1137,
-    "dest_ip": "106,101,100,105",
+    "dest_ip": "106.101.100.105",
     "dest_port": 286
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 0,
     "payload": "Death Star ",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 1137,
-    "dest_ip": "98,97,115,101",
+    "dest_ip": "98.97.115.101",
     "dest_port": 80
   },
   {
-    "src_ip": "  115,105,116,104 ",
-    "dest_ip": "98,97,115,101  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -369,26 +369,26 @@
     "payload": "to"
   },
   {
-    "timestamp": "   2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 2,
     "payload": " base.",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 1137,
-    "dest_ip": "98,97,115,101",
+    "dest_ip": "98.97.115.101",
     "dest_port": 80
   },
   {
-    "src_ip": "115,105,116,104  ",
-    "dest_ip": "   98,97,115,101  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
-    "timestamp": "   2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 3,
     "payload": "Are you sure "
   },
   {
-    "src_ip": " 115,105,116,104  ",
-    "dest_ip": "  98,97,115,101  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -399,14 +399,14 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 5,
     "payload": " closed",
-    "src_ip": "115,105,116,104",
+    "src_ip": "115.105.116.104",
     "src_port": 1137,
-    "dest_ip": "98,97,115,101",
+    "dest_ip": "98.97.115.101",
     "dest_port": 80
   },
   {
-    "src_ip": " 115,105,116,104 ",
-    "dest_ip": "   98,97,115,101  ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -414,8 +414,8 @@
     "payload": " all ports?"
   },
   {
-    "src_ip": "115,105,116,104 ",
-    "dest_ip": " 98,97,115,101   ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -423,8 +423,8 @@
     "payload": " Open ports"
   },
   {
-    "src_ip": "115,105,116,104",
-    "dest_ip": "   98,97,115,101 ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
     "timestamp": "2022-07-04 16:07:39",
@@ -432,17 +432,17 @@
     "payload": " can cause"
   },
   {
-    "src_ip": "115,105,116,104  ",
-    "dest_ip": "   98,97,115,101   ",
+    "src_ip": "115.105.116.104",
+    "dest_ip": "98.97.115.101",
     "src_port": 1137,
     "dest_port": 1137,
-    "timestamp": " 2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 9,
     "payload": " problems."
   },
   {
-    "src_ip": "  145,18,11,151   ",
-    "dest_ip": "   127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -450,44 +450,44 @@
     "payload": "Hoe analyseer"
   },
   {
-    "src_ip": "   145,18,11,151  ",
-    "dest_ip": "   127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
-    "timestamp": "2022-07-04 16:07:39   ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 1,
     "payload": " en vergelijk je alle bestanden in een systeem met een "
   },
   {
-    "src_ip": "   145,18,11,151  ",
-    "dest_ip": " 127,0,0,1 ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
-    "timestamp": " 2022-07-04 16:07:39   ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 2,
     "payload": "lijst van bekende malware? "
   },
   {
-    "src_ip": " 145,18,11,151  ",
-    "dest_ip": "127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
-    "timestamp": " 2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 3,
     "payload": "Waar begin je om in een datadump "
   },
   {
-    "timestamp": "  2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 4,
     "payload": "op zoek te gaan naar potentieel ",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
-    "src_ip": " 145,18,11,151",
-    "dest_ip": "   127,0,0,1",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -495,8 +495,8 @@
     "payload": "malafide netwerkverkeer? Wat heb je nodig om je eigen pen-test te schrijven?\n"
   },
   {
-    "src_ip": " 145,18,11,151 ",
-    "dest_ip": "   127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -504,8 +504,8 @@
     "payload": "Tijdens SMP-Python leg je de basis om dit soort praktische problemen programmatisch op te lossen."
   },
   {
-    "src_ip": "   145,18,11,151",
-    "dest_ip": " 127,0,0,1   ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -513,8 +513,8 @@
     "payload": " Hierbij m"
   },
   {
-    "src_ip": "  145,18,11,151  ",
-    "dest_ip": "  127,0,0,1",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -522,11 +522,11 @@
     "payload": "aak je gebruik van complexe datast"
   },
   {
-    "src_ip": "145,18,11,151  ",
-    "dest_ip": "   127,0,0,1   ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
-    "timestamp": "  2022-07-04 16:07:39 ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 9,
     "payload": "ructuren zoals dictionaries, en geavanceerdere concepten zoals classes "
   },
@@ -534,50 +534,50 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 10,
     "payload": "en algoritmen. Deze pas je toe op een g",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 11,
     "payload": "estructureerde, analytische wijze, waarbij je leert anticiperen op uitzonderingen. \n",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 12,
     "payload": "Het kunnen lezen en schrij",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
-    "src_ip": " 145,18,11,151 ",
-    "dest_ip": "127,0,0,1 ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
-    "timestamp": "2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 13,
     "payload": "ven van c"
   },
   {
-    "src_ip": "   145,18,11,151   ",
-    "dest_ip": " 127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
-    "timestamp": " 2022-07-04 16:07:39",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 14,
     "payload": "ode, he"
   },
   {
-    "src_ip": "   145,18,11,151",
-    "dest_ip": "127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -588,14 +588,14 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 16,
     "payload": "s",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
-    "src_ip": "145,18,11,151  ",
-    "dest_ip": "127,0,0,1  ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -606,23 +606,23 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 18,
     "payload": " van netwerkinformatie zijn fundamentele vaar",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 19,
     "payload": "digheden waar je je carri\u00e8re als cyberse",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
-    "src_ip": "  145,18,11,151 ",
-    "dest_ip": "   127,0,0,1 ",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "127.0.0.1",
     "src_port": 443,
     "dest_port": 443,
     "timestamp": "2022-07-04 16:07:39",
@@ -633,35 +633,35 @@
     "timestamp": "2022-07-04 16:07:39",
     "msg_no": 21,
     "payload": "die in alle vakgebieden terugkomen.",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 443,
-    "dest_ip": "127,0,0,1",
+    "dest_ip": "127.0.0.1",
     "dest_port": 80
   },
   {
-    "src_ip": " 145.18.11.151",
-    "dest_ip": "   115,105,116,104",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "115.105.116.104",
     "src_port": 66,
     "dest_port": 66,
-    "timestamp": " 2022-07-04 16:07:39  ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 1005,
     "payload": "Hello there!"
   },
   {
-    "timestamp": "  2022-07-04 16:07:39   ",
+    "timestamp": "2022-07-04 16:07:39",
     "msg_no": 1006,
     "payload": "Ehh.. What?",
-    "src_ip": "145,18,11,151",
+    "src_ip": "145.18.11.151",
     "src_port": 66,
-    "dest_ip": "115,105,116,104",
+    "dest_ip": "115.105.116.104",
     "dest_port": 66
   },
   {
-    "src_ip": "   145,18,11,151   ",
-    "dest_ip": "   115,105,116,104",
+    "src_ip": "145.18.11.151",
+    "dest_ip": "115.105.116.104",
     "src_port": 66,
     "dest_port": 66,
-    "timestamp": "  2022-07-04 23:07:39",
+    "timestamp": "2022-07-04 23:07:39",
     "msg_no": 1007,
     "payload": "Oh, sorry!"
   }

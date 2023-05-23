@@ -2,7 +2,6 @@
 
 import sys
 
-
 def binary_search(needle, haystack):
     """
     Perform binary search for needle in haystack.
@@ -25,7 +24,7 @@ def main():
     Entry point for the script.
     """
     if len(sys.argv) != 3:
-        print("Usage: appne <needle> <haystack>")
+        print("Usage: binary_search <needle> <haystack>")
         sys.exit(1)
 
     needle = int(sys.argv[1])
@@ -38,6 +37,6 @@ def main():
     else:
         print(f"{needle} found at index {index} in {haystack}")
 
-
+#  if program is run directly, call main()
 if __name__ == "__main__":
     main()

@@ -9,6 +9,7 @@ def test_exceptions():
     with pytest.raises(ZeroDivisionError):
         1/0
 
+#
 def strip(s: str) -> str:
     return s.strip()
 

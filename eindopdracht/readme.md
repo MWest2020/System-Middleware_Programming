@@ -32,13 +32,15 @@ Ongebruikelijkheden (specifics)
 - [FIN-ACK]: Wel FIN, maar ACK niet (volgens mij in deze cpture niet aan de orde)
 - [ACK-PSH-FIN](https://kb.mazebolt.com/knowledgebase/ack-psh-fin-flood/): Deze combi kan een FLOOD attack zijn.
 
-de bedoeling is dat de gebruiker met deze optie snel de TCP-flaggen kan analyseren en daarmee tijd scheelt. Daarnaast kijkt vraag 2 naar `tcp.flag.str`, wat aangeeft welke flags aan staan. Zoals `ACK-PUSH`
+de bedoeling is dat de gebruiker met deze optie snel de TCP-flaggen kan analyseren en daarmee tijd scheelt. Daarnaast kijkt vraag 2 naar `tcp.flag.str`, wat aangeeft welke flags aan staan. Zoals `ACK-PUSH`.
 
 ## Vraag 3
 
 Geef een overzicht van de `ws.expert.message` velden van een specifieke `timestamp`, `ip.src` / `ip.dst` of `tcp.dst` door middel van een commando als `loupe {specifics} --list-ws-exp-msg`. Dit geeft het aantal messages en de messages zelf weer.
 
-### herziende versie vraag 2 (reden: ongebruikelijkheden te vaag)
+### herziende versie vraag 3 (reden: waarom ws.expert.messages)
+
+`ws.expert.message` velden zijn WireShark messages die inzicht geven in mogelijke dreigigen. Gedurende ontwikkeling zal ik kijken naar de complexiteit, indien het te simpel wordt, verzin k nog een vraag erbij.
 
 ## Installatie
 

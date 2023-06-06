@@ -16,7 +16,9 @@ class DataProcessor:
         with open(file_path, 'w') as f:
             json.dump(json_data, f)
 
-    def group_TCP(key, data ) -> dict:
+
+    # getting ugly with the 3 parameters
+    def group_TCP(self, connection,  data ) -> dict:
         
         # dictionary to store TCP connections
         TCP_connections = {}
@@ -24,13 +26,21 @@ class DataProcessor:
         for packet in data:
             nested = packet["_source"]["layers"]
             # tuple for TCP connection (src ip, src port, dst ip, dst port) 
-            key = (nested["ip"]["ip.src"], nested["tcp"]["tcp.srcport"], nested["ip"]["ip.dst"], nested["tcp"]["tcp.dstport"])
-        
-            # when key is not found
-            if key not in TCP_connections:
-                TCP_connections[key] = []
+            
+            # Working here on specific connection
+            connection = (nested["ip"]["ip.src"], nested["tcp"]["tcp.srcport"], nested["ip"]["ip.dst"], nested["tcp"]["tcp.dstport"])
+            
+            # connection =  ('192.168.1.9', '80', '10.128.0.26', '60755')
+
+            # when connection is not found
+            if connection not in TCP_connections:
+                TCP_connections[connection] = []
                 print('TCP connection not found')
 
             # if TCP connection is found, add to dictionary.
-            TCP_connections[key].append(packet)
+            TCP_connections[connection].append(packet)
 
+        for key, value in TCP_connections.items():
+            # print(key, value)
+            print(list(dict.fromkeys(TCP_connections)))
+            print(f"\n \n \n \n \n ****************************** \n {len(TCP_connections)} packets grouped \n ****************************** \n \n")

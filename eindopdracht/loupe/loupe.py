@@ -13,7 +13,10 @@ def main():
     processor = DataProcessor()
     capture = processor.read_json(args.filename)
 
-    print(capture)
+    # print(capture)
+    grouped = processor.group_TCP(capture)
+    print(grouped)
+
 
 
 if __name__ == '__main__':

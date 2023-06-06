@@ -11,41 +11,63 @@ class DataProcessor:
             data = json.load(f)
             return data
         
+    # write text file
+    def write_text(self, file_path, data):
+        with open(file_path, 'w') as f:
+            f.write(data)
+
     # Writing json. 
     def write_json(self, file_path, json_data):
         with open(file_path, 'w') as f:
-            json.dump(json_data, f)
+            json.dump(json_data, f, indent=4)
 
 
-    # getting ugly with the 3 parameters
-    def group_TCP(self, connection,  data ) -> dict:
+    # # get TCP connections
+    # def get_tcp_connections(self, data ) :
         
-        # dictionary to store TCP connections
-        TCP_connections = {}
+    #     # dictionary to store TCP connections
+    #     TCP_connections = []
 
+    #     for packet in data:
+    #         nested = packet["_source"]["layers"]
+    #         connection = (nested["ip"]["ip.src"], nested["tcp"]["tcp.srcport"], nested["ip"]["ip.dst"], nested["tcp"]["tcp.dstport"])
+            
+    #         # when connection is not found
+    #         # if connection not in TCP_connections:
+    #         #     TCP_connections[connection] = []
+    #         #     print('TCP connection not found')
+
+    #         # if TCP connection is found, add to dictionary.
+    #         TCP_connections.append(packet)
+
+    #     # for key, value in TCP_connections.items():
+    #     #     # print(key, value)
+        
+    #     return TCP_connections
+
+    # # Get a single TCP connection
+    # # def get_TCP_connection():
+
+    def get_tcp_connections(self, data):
+        # Initialize an empty list to store TCP connections
+        tcp_connections = []
+
+        # Iterate through each packet in the dataset
         for packet in data:
-            nested = packet["_source"]["layers"]
-            # tuple for TCP connection (src ip, src port, dst ip, dst port) 
+            # Extract the TCP information from the packet
+            tcp_info = packet["_source"]["layers"]["tcp"]
             
-            # Working here on specific connection
-            # all connections
-            # connection = (nested["ip"]["ip.src"], nested["tcp"]["tcp.srcport"], nested["ip"]["ip.dst"], nested["tcp"]["tcp.dstport"])
+            # Extract the source and destination IP addresses and ports
+            src_ip = packet["_source"]["layers"]["ip"]["ip.src"]
+            dst_ip = packet["_source"]["layers"]["ip"]["ip.dst"]
+            src_port = tcp_info["tcp.srcport"]
+            dst_port = tcp_info["tcp.dstport"]
             
-            # specific connection
-            # connection =  ('192.168.1.9', '80', '10.128.0.26', '60755')
+            # Create a TCP connection tuple and add it to the list
+            tcp_connection = (src_ip, src_port, dst_ip, dst_port)
+            tcp_connections.append(tcp_connection)
 
-            
-
-
-            # when connection is not found
-            if connection not in TCP_connections:
-                TCP_connections[connection] = []
-                print('TCP connection not found')
-
-            # if TCP connection is found, add to dictionary.
-            TCP_connections[connection].append(packet)
-
-        for key, value in TCP_connections.items():
-            # print(key, value)
-            print(list(dict.fromkeys(TCP_connections)))
-            print(f"\n \n \n \n \n ****************************** \n {len(TCP_connections)} packets grouped \n ****************************** \n \n")
+        # Print the extracted TCP connections
+        for connection in tcp_connections:
+            print(connection)
+        print(len(tcp_connections))

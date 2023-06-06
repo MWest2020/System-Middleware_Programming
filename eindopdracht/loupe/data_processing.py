@@ -28,9 +28,14 @@ class DataProcessor:
             # tuple for TCP connection (src ip, src port, dst ip, dst port) 
             
             # Working here on specific connection
-            connection = (nested["ip"]["ip.src"], nested["tcp"]["tcp.srcport"], nested["ip"]["ip.dst"], nested["tcp"]["tcp.dstport"])
+            # all connections
+            # connection = (nested["ip"]["ip.src"], nested["tcp"]["tcp.srcport"], nested["ip"]["ip.dst"], nested["tcp"]["tcp.dstport"])
             
+            # specific connection
             # connection =  ('192.168.1.9', '80', '10.128.0.26', '60755')
+
+            
+
 
             # when connection is not found
             if connection not in TCP_connections:

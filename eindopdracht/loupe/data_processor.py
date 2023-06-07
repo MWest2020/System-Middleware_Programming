@@ -8,7 +8,7 @@ class DataProcessor:
     # @staticmethod
     def read_json(self, file_path):
         # reads and returns json data
-        with open(file_path, 'r') as f:
+        with open("../data/" + file_path, 'r') as f:
             data = json.load(f)
             return data
 
@@ -63,8 +63,4 @@ class DataProcessor:
                 if connection == tuple(blacklisted):
                     blacklisted_connections.append(connection)
 
-        # TODO: remove prints to loupe.py
-        # print(
-        #     f"Out of {len(connections)} TCP connections, {len(blacklisted_connections)} are blacklisted.")
-        # print(f"Blacklisted connections: {blacklisted_connections}")
         return blacklisted_connections

@@ -11,7 +11,20 @@ De applicatie dient opgeleverd te worden inclusief tests en documentatie.
 
 ## Vraag 1
 
-Kruis-verifieer specifieke TCP/IP addressen met bekende kwaadwillende, of gewhiteliste adressen door een commando te gebruiken zoals `loupe cross {protocol} --blacklist`.
+Kruis-verifieer specifieke TCP/IP addressen met bekende kwaadwillende, of gewhiteliste adressen door een commando te gebruiken zoals `loupe.py {dataset} --blacklist {blacklist.json}`
+
+| note: dit werkt met een textbestand met daarin een list met tuples met ip-adressen of door een ip-adres op te geven:
+ `loupe.py {blacklist} --src {source ip} --srcport {source port} --dst{destination ip} --dstport {destination port}`.
+
+ Dit werkt ook met shortform:
+
+`loupe.py {blacklist} -s {source ip} -p {source port} -d{destination ip} -P {destination port}`.
+
+or simply a list:
+
+`loupe.py {dataset} [{source ip}, {source port}, {destination ip}, {destination port}]`.
+
+Everything also works with whitelists. Just replace the word `blacklist` to `whitelist`
 
 ## Vraag 2
 

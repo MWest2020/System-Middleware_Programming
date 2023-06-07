@@ -29,6 +29,8 @@ class DataProcessor:
         with open(file_path, 'w') as f:
             json.dump(json_data, f, indent=4)
 
+
+
     def get_tcp_connections(self, data):
         # Initialize an empty list to store TCP connections
         tcp_connections = []
@@ -56,12 +58,20 @@ class DataProcessor:
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []
-        #
+
         for connection in connections:
+            # Split the connection into src IP and dst IP
+            src_ip, src_port, dst_ip, dst_port = connection
             for blacklisted in blacklist:
-                # checks for blacklisted tcp connections and appends to list
-                if connection == tuple(blacklisted):
-                    blacklisted_connections.append(connection)
+                # If the blacklisted item is a complete connection
+                if len(blacklisted) == 4:
+                    # checks for blacklisted tcp connections and appends to list
+                    if connection == tuple(blacklisted):
+                        blacklisted_connections.append(connection)
+                else:
+                    # If the blacklisted item is just an IP address
+                    if dst_ip == blacklisted[0] or src_ip == blacklisted[0]:
+                        blacklisted_connections.append(connection)
 
         return blacklisted_connections
 

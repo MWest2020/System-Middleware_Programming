@@ -11,10 +11,10 @@ class CLI:
         # For `blacklist` as a command taking a filename as an argument
         self.blacklist_parser = self.subparsers.add_parser('blacklist', help='process blacklist')
         self.blacklist_parser.add_argument('--blacklist_file', help='the blacklist JSON file')
-        self.blacklist_parser.add_argument('--src', help='source IP for blacklist')
-        self.blacklist_parser.add_argument('--srcport', help='source port for blacklist')
-        self.blacklist_parser.add_argument('--dst', help='destination IP for blacklist')
-        self.blacklist_parser.add_argument('--dstport', help='destination port for blacklist')
+        self.blacklist_parser.add_argument('--src', '-s',  help='source IP for blacklist')
+        self.blacklist_parser.add_argument('--srcport', '-p',  help='source port for blacklist')
+        self.blacklist_parser.add_argument('--dst', '-d', help='destination IP for blacklist')
+        self.blacklist_parser.add_argument('--dstport', '-P' , help='destination port for blacklist')
 
     def parse_args(self):
         return self.parser.parse_args()

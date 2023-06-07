@@ -38,8 +38,9 @@ def main():
         # Compare TCP connections against the blacklist
         blacklisted = processor.compare_blacklist(tcp, blacklist)
 
-        print(f"Out of {len(tcp)} TCP connections, {len(blacklisted)} are blacklisted.")
-        print(f"Blacklisted connections: {blacklisted}")
+        if args.blacklist_file:
+            print(f"Out of {len(tcp)} TCP connections, {len(blacklisted)} are blacklisted.")
+            print(f"Blacklisted connections: {blacklisted}")
 
 if __name__ == '__main__':
     main()

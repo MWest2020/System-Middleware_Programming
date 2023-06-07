@@ -10,7 +10,14 @@ class DataProcessor:
         with open(file_path, 'r') as f:
             data = json.load(f)
             return data
-        
+
+    # read text file
+    def read_text(self, file_path):
+        with open(file_path, 'r') as f:
+            data = f.readlines(file_path)
+            return data
+
+
     # write text file
     def write_text(self, file_path, data):
         with open(file_path, 'w') as f:
@@ -66,8 +73,19 @@ class DataProcessor:
             # Create a TCP connection tuple and add it to the list
             tcp_connection = (src_ip, src_port, dst_ip, dst_port)
             tcp_connections.append(tcp_connection)
+        
+        # remove duplicates from the list (set does this)
+        tcp_connections = list(set(tcp_connections))
 
         # Print the extracted TCP connections
-        for connection in tcp_connections:
-            print(connection)
-        print(len(tcp_connections))
+        return tcp_connections
+    
+    def compare_blacklist(self, connections, blacklist):
+        blacklisted_connections = []
+        # 
+        for connection in connections:
+            for blacklisted in blacklist:
+                if connection[2:] == tuple(blacklisted[2:]):
+                    blacklisted_connections.append(connection)
+        
+        return blacklisted_connections 

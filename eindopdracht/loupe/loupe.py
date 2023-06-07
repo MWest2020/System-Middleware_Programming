@@ -9,23 +9,29 @@ def main():
     cli = CLI()
     args = cli.parse_args()
 
-    #  instantieer de DataProcessor class
+    #  instantiate the data_processor class
     processor = DataProcessor()
     # read the file from the CLI input and store it in a variable
     capture = processor.read_json(args.filename)
-
+    
+    # get all connections from the capture
     tcp = processor.get_tcp_connections(capture)
 
-    print(tcp)
 
-    
+    blacklist = processor.read_json('./blacklisted.json')
+    print(blacklist)
+
+
+    blacklisted = processor.compare_blacklist(tcp, blacklist)
+    # print(blacklisted)
+
 
     # # Use the function
     # tcp_connections = processor.get_tcp_connections(capture)
 
     # # Write the result to a JSON file
     # print(tcp_connections)
-    processor.write_json('tcp.json', tcp)
+    # processor.write_json('tcp.json', tcp)
     
     # # # The group method.  
     # # connection = ('192.168.1.9', '80', '10.128.0.26', '60755')

@@ -19,12 +19,11 @@ def main():
 
 
     blacklist = processor.read_json('./blacklisted.json')
-    print(blacklist)
+    
 
 
     blacklisted = processor.compare_blacklist(tcp, blacklist)
-    # print(blacklisted)
-
+    
 
     # # Use the function
     # tcp_connections = processor.get_tcp_connections(capture)

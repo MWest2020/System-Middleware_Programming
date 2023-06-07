@@ -85,7 +85,10 @@ class DataProcessor:
         # 
         for connection in connections:
             for blacklisted in blacklist:
-                if connection[2:] == tuple(blacklisted[2:]):
+                # checks for blacklisted tcp connections and appends to list
+                if connection == tuple(blacklisted):
                     blacklisted_connections.append(connection)
         
+        print(f"Out of {len(connections)} TCP connections, {len(blacklisted_connections)} are blacklisted.")
+        print(f"Blacklisted connections: {blacklisted_connections}")
         return blacklisted_connections 

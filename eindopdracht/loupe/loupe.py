@@ -19,6 +19,9 @@ def main():
     # Get all connections from the capture
     tcp = processor.get_tcp_connections(capture)
 
+    
+    processor.write_tcp_connections(capture, '../data/tcp_connections.json')
+    
     # THIS IS ONLY FOR 1 IP ADDRESS 
     if args.command == 'blacklisted':
     # If specific source or destination IP is specified, create a list with only that IP address
@@ -54,6 +57,15 @@ def main():
         if args.blacklist_file:
             print(f"Out of {len(tcp)} TCP connections, {len(blacklisted)} are blacklisted.")
             print(f"Blacklisted connections: {blacklisted}")
+
+
+    
+
+
+
+
+
+
 
 if __name__ == '__main__':
     main()

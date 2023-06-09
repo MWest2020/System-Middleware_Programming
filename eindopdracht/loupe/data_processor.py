@@ -57,7 +57,15 @@ class DataProcessor:
         return tcp_connections
     
         
-    def write_tco_connections
+    def write_tcp_connections(self, connections, file_path):
+        # tuples to list 
+        connections = [list(connection) for connection in connections]
+        
+        self.write_json('../data/tcp_connections.json', connections )
+        
+    def analyze_tcp_connections(self, file_path):
+        connections = self.read_json(file_path)
+        print("Total num. of TCP connections: {}", len(connections) )        
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []

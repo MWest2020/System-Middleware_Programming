@@ -4,7 +4,7 @@ import json
 
 class DataProcessor:
 
-    # No need for self as argument
+    # TODO : No need for self as argument?
     # @staticmethod
     def read_json(self, file_path):
         # reads and returns json data
@@ -55,6 +55,9 @@ class DataProcessor:
 
         # Print the extracted TCP connections
         return tcp_connections
+    
+        
+    def write_tco_connections
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []

@@ -48,9 +48,6 @@ def main():
             print("Error: Please specify either a blacklist file or specific connection details")
             return 
 
-
-
-        
         # Compare TCP connections against the blacklist
         blacklisted = processor.compare_blacklist(tcp, blacklist)
 

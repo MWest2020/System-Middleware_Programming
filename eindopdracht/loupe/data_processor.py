@@ -48,7 +48,7 @@ class DataProcessor:
         # tcp_connections = list(set(tcp_connections))
 
         # Print the extracted TCP connections
-        print(tcp_connections)
+        # print(tcp_connections[0])
         return tcp_connections
     
         
@@ -66,19 +66,20 @@ class DataProcessor:
         blacklisted_connections = []
 
         for connection in connections:
-            # Split the connection into src IP and dst IP
-            src_ip, src_port, dst_ip, dst_port = connection
-            for blacklisted in blacklist:
-                # If the blacklisted item is a complete connection
-                if len(blacklisted) == 4:
-                    # checks for blacklisted tcp connections and appends to list
-                    if connection == tuple(blacklisted):
+            # checks for blacklisted tcp connections and appends to list
+            connection_tuple = (connection.get('ip.src'), connection.get('tcp.srcport'), connection.get('ip.dst'), connection.get('tcp.dstport'))
+                # If the 'blacklist' is a list of dictionaries
+            if isinstance(blacklist, list) and isinstance(blacklist[0], dict):
+                for blacklisted in blacklist:
+                    blacklisted_tuple = (blacklisted.get('ip.src'), blacklisted.get('tcp.srcport'), blacklisted.get('ip.dst'), blacklisted.get('tcp.dstport'))
+                    if connection_tuple == blacklisted_tuple:
                         blacklisted_connections.append(connection)
-                else:
-                    # If the blacklisted item is just an IP address
-                    if dst_ip == blacklisted[0] or src_ip == blacklisted[0]:
-                        blacklisted_connections.append(connection)
+
+            # If the 'blacklist' is a tuple
+            elif isinstance(blacklist, tuple):
+                if connection_tuple == blacklist:
+                    print(connections)
+                    blacklisted_connections.append(connection)
 
         return blacklisted_connections
-
 

@@ -20,36 +20,43 @@ def main():
     tcp = processor.get_tcp_connections(capture)
 
     
-    processor.write_tcp_connections(capture, '../data/tcp_connections.json')
-    
+    processor.write_tcp_connections(tcp, '../data/tcp_connections.json')
+    print(args.command)
     # THIS IS ONLY FOR 1 IP ADDRESS 
     if args.command == 'blacklisted':
-    # If specific source or destination IP is specified, create a list with only that IP address
-        if args.dst:
-            blacklist = [[args.dst]]
-            print(f"The destination IP address is on a blacklist: ")
+        # If specific source or destination IP is specified, create a list with only that IP address
+        if args.dst and args.src and args.dstport and args.srcport:
+            # Create a list with only one item, a tuple representing the connection details
+            blacklist = [(args.src, args.srcport, args.dst, args.dstport)]
+            # Compare TCP connections against the blacklist
+            blacklisted = processor.compare_blacklist(tcp, blacklist)
+
+            # print results HERE WAS A WRONG PRINT STATEMENT (THE ONE FROM BLACKLIST)
+            print(f"The TCP connection you entered is linked to a blacklist: ")
             print(f"Blacklisted connection: {blacklist}")
-        elif args.src:
-            blacklist = [[args.src]]
-            print(f"The source IP address is on a blacklist: ")
-            print(f"Blacklisted connection: {blacklist}")
+        else:
+            # Error: blacklisted command needs specific connection details
+            print("Error: Please specify connection details (source IP, source port, destination IP, destination port)")
+
 
 
     if args.command == 'blacklist':
         if args.blacklist_file:
             # If a blacklist file is specified, read it
+            
             blacklist = processor.read_json(args.blacklist_file)
+            print(f"Blacklist: {blacklist}")
             
-            
-        elif args.src or args.srcport or args.dst or args.dstport:
-            # If specific connection details are specified, create a list
-            blacklist = [[args.src, args.srcport, args.dst, args.dstport]]
-            print(f"The TCP connection you enters is linked to a blacklist: ")
-            print(f"Blacklisted connection: {blacklist}")
-        else:
-            # Error: blacklist command needs either a blacklist file or specific connection details
-            print("Error: Please specify either a blacklist file or specific connection details")
-            return 
+        # THIS DID NOTHING
+        # elif args.src or args.srcport or args.dst or args.dstport:
+        #     # If specific connection details are specified, create a dict
+        #     blacklist = [{'ip.src': args.src, 'tcp.srcport': args.srcport, 'ip.dst': args.dst, 'tcp.dstport': args.dstport}]
+        #     print(f"The TCP connection you entered is linked to a blacklist: ")
+        #     print(f"Blacklisted connection: {blacklist}")
+        # else:
+        #     # Error: blacklist command needs either a blacklist file or specific connection details
+        #     print("Error: Please specify either a blacklist file or specific connection details")
+        #     return 
 
         # Compare TCP connections against the blacklist
         blacklisted = processor.compare_blacklist(tcp, blacklist)

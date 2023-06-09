@@ -16,10 +16,20 @@ class CLI:
         self.blacklist_parser.add_argument('--dst', '-d', help='destination IP for blacklist')
         self.blacklist_parser.add_argument('--dstport', '-P' , help='destination port for blacklist')
         
-        # check if next line is needed
-        self.blacklist_parser = self.subparsers.add_parser('blacklisted', help='process individual blacklist entry')
-        self.blacklist_parser.add_argument('--dst', '-d', required=False, help='destination IP for blacklist')
-        self.blacklist_parser.add_argument('--src', '-s', required=False, help='source IP for blacklist')
+        # # check if next line is needed
+        # self.blacklist_parser = self.subparsers.add_parser('blacklisted', help='process individual blacklist entry')
+        # self.blacklist_parser.add_argument('--dst', '-d', required=False, help='destination IP for blacklist')
+        # self.blacklist_parser.add_argument('--src', '-s', required=False, help='source IP for blacklist')
+        
+        # Separate parser for `blacklisted` command
+        self.blacklisted_parser = self.subparsers.add_parser('blacklisted', help='process individual blacklist entry')
+        self.blacklisted_parser.add_argument('--dst', '-d', required=False, help='destination IP for blacklist')
+        self.blacklisted_parser.add_argument('--src', '-s', required=False, help='source IP for blacklist')
+        
+        # Add --srcport and --dstport arguments to 'blacklisted' command as well
+        self.blacklisted_parser.add_argument('--srcport', '-p',  help='source port for blacklist')
+        self.blacklisted_parser.add_argument('--dstport', '-P' , help='destination port for blacklist')
+        
         
     def parse_args(self):
         return self.parser.parse_args()

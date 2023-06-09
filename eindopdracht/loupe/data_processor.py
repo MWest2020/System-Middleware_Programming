@@ -37,23 +37,18 @@ class DataProcessor:
 
         # Iterate through each packet in the dataset
         for packet in data:
-            # Extract the TCP information from the packet
             tcp_info = packet["_source"]["layers"]["tcp"]
+            ip_info = packet["_source"]["layers"]["ip"]            
 
-            # Extract the source and destination IP addresses and ports
-            src_ip = packet["_source"]["layers"]["ip"]["ip.src"]
-            dst_ip = packet["_source"]["layers"]["ip"]["ip.dst"]
-            src_port = tcp_info["tcp.srcport"]
-            dst_port = tcp_info["tcp.dstport"]
-
-            # Create a TCP connection tuple and add it to the list
-            tcp_connection = (src_ip, src_port, dst_ip, dst_port)
+            # Create a TCP connection dictionary and add it to the list
+            tcp_connection = {**ip_info, **tcp_info}
             tcp_connections.append(tcp_connection)
 
-        # remove duplicates from the list (set does this)
-        tcp_connections = list(set(tcp_connections))
+        # # remove duplicates from the list (set does this)
+        # tcp_connections = list(set(tcp_connections))
 
         # Print the extracted TCP connections
+        print(tcp_connections)
         return tcp_connections
     
         

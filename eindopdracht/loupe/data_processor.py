@@ -119,7 +119,7 @@ class DataProcessor:
                 
                 
     ## BEYOND BLACK
-    
+        
     def get_tcp_flag_changes(self, src_ip, src_port, dst_ip, dst_port):
         
         # hardcoded, because otherwise too many arguments (already) in fucntion signature
@@ -139,7 +139,54 @@ class DataProcessor:
             if not printed_timestamp:
                 print(f"Connections are captured on: {packet['timestamp']} GMT")
                 printed_timestamp = True
+            
+            flag_value_hex = packet['tcp.flags']
+            active_flags = self.decode_tcp_flags(flag_value_hex)
+            attack_name = self.detect_attack(active_flags)
+            
             # time relative to capture wireshark. One would need to know that.
-            print(f"Time: {packet['Timestamps']['tcp.time_relative']}, Flags: {packet['tcp.flags']}")
+            print(f"Time: {packet['Timestamps']['tcp.time_relative']}, Flags: {active_flags}, Detected: {attack_name} ")
 
-    # def decode_tcp_flags(self, flag)
+    def decode_tcp_flags(self, flag_value):
+        
+        # hex to latin letters
+        flags = {
+        'FIN': 0x01,
+        'SYN': 0x02,
+        'RST': 0x04,
+        'PSH': 0x08,
+        'ACK': 0x10,
+        'URG': 0x20,
+        'ECE': 0x40,
+        'CWR': 0x80
+        }
+        
+        # hex to integer
+        flag_value = int(flag_value, 16)
+        
+        active_flags = [
+            
+            flag for flag, 
+            item in flags.items() if flag_value & item
+        ]
+        
+        return active_flags
+    
+    
+    def detect_attack(self, flags):
+        
+        attack_map = {
+        frozenset(['SYN', 'FIN']): "SYN-FIN attack",
+        frozenset(['SYN', 'RST']): "SYN-RST attack",
+        frozenset(['SYN', 'URG']): "SYN-URG attack",
+        frozenset(['FIN', 'ACK']): "FIN-ACK attack",
+        frozenset(['FIN', 'PSH', 'URG']): "FIN-PSH-URG attack",
+        frozenset(['PSH', 'URG']): "PSH-URG attack",
+        frozenset(['RST', 'PSH']): "RST-PSH attack",
+        frozenset(['ACK', 'FIN', 'RST']): "ACK-FIN-RST attack",
+        }
+        
+        #  check if key is in attack_map
+        attack_name = attack_map.get(frozenset(flags))
+                                     
+        return attack_name

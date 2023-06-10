@@ -40,24 +40,13 @@ class DataProcessor:
 
             # Create a TCP connection dictionary and add it to the list
             tcp_connection = {**ip_info, **tcp_info}
+            # print(f"{tcp_connection}")
             tcp_connections.append(tcp_connection)
 
-        # # remove duplicates from the list (set does this)
-        # tcp_connections = list(set(tcp_connections))
+      
 
         # Print the extracted TCP connections
-        # print(tcp_connections[0])
         return tcp_connections
-
-    def write_tcp_connections(self, connections, file_path):
-        # tuples to list
-        connections = [list(connection) for connection in connections]
-
-        self.write_json('../data/tcp_connections.json', connections)
-
-    def analyze_tcp_connections(self, file_path):
-        connections = self.read_json(file_path)
-        print("Total num. of TCP connections: {}", len(connections))
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []
@@ -85,5 +74,27 @@ class DataProcessor:
                 if connection_tuple == blacklist:
                     print(connections)
                     blacklisted_connections.append(connection)
-
+           
         return blacklisted_connections
+
+    def check_blacklisted_ips(self, blacklisted, blacklist_file):
+        # Read the blacklist file and construct a list of blacklisted IPs
+        blacklist = self.read_json(blacklist_file)
+        
+        # print(f"{blacklisted}")
+        # print(f"{blacklist}")
+        
+        
+        blacklisted_ips = [item['ip.src'] for item in blacklist if 'ip.src' in item] + \
+                        [item['ip.dst'] for item in blacklist if 'ip.dst' in item]
+
+        # Iterate over the blacklisted connections and check each source and destination IP
+        for connection in blacklisted:
+            src_ip = connection['ip.src']
+            dst_ip = connection['ip.dst']
+            if src_ip in blacklisted_ips:
+                print(f"The source IP address {src_ip} is blacklisted.")
+            if dst_ip in blacklisted_ips:
+                print(f"The destination IP address {dst_ip} is blacklisted.")
+
+        

@@ -43,8 +43,6 @@ class DataProcessor:
             # print(f"{tcp_connection}")
             tcp_connections.append(tcp_connection)
 
-      
-
         # Print the extracted TCP connections
         return tcp_connections
 
@@ -52,56 +50,62 @@ class DataProcessor:
         blacklisted_connections = []
 
         for connection in connections:
-            # checks for blacklisted tcp connections and appends to list
-            connection_tuple = (
-                connection.get('ip.src'),
-                connection.get('tcp.srcport'),
-                connection.get('ip.dst'),
-                connection.get('tcp.dstport'))
+            # Convert each connection to a dictionary
+            connection_dict = self.connection_to_dict(connection)
 
-            connection_dict = {
-                'ip.src': connection.get('ip.src'),
-                'tcp.srcport': connection.get('tcp.srcport'),
-                'ip.dst': connection.get('ip.dst'),
-                'tcp.dstport': connection.get('tcp.dstport')
-            }
+            # Check if the connection is blacklisted
+            if self.is_blacklisted(connection_dict, blacklist):
+                blacklisted_connections.append(connection)
 
-            # If the 'blacklist' is a list of dictionaries
-            if isinstance(blacklist, list) and isinstance(blacklist[0], dict):
-                for blacklisted in blacklist:
-                    blacklisted_tuple = (
-                        blacklisted.get('ip.src'),
-                        blacklisted.get('tcp.srcport'),
-                        blacklisted.get('ip.dst'),
-                        blacklisted.get('tcp.dstport'))
-                    if connection_tuple == blacklisted_tuple:
-                        blacklisted_connections.append(connection)
-
-            # If the 'blacklist' is a dictionary
-            elif isinstance(blacklist, dict):
-                if connection_dict == blacklist:
-                    blacklisted_connections.append(connection)
-                    
         return blacklisted_connections
 
-    def check_blacklisted_ips(self, blacklisted, blacklist_file):
-        # Read the blacklist file and construct a list of blacklisted IPs
-        blacklist = self.read_json(blacklist_file)
-        
-        # print(f"{blacklisted}")
-        # print(f"{blacklist}")
-        
-        
-        blacklisted_ips = [item['ip.src'] for item in blacklist if 'ip.src' in item] + \
-                        [item['ip.dst'] for item in blacklist if 'ip.dst' in item]
+    def connection_to_dict(self, connection):
+        return {
+            'ip.src': connection.get('ip.src'),
+            'tcp.srcport': connection.get('tcp.srcport'),
+            'ip.dst': connection.get('ip.dst'),
+            'tcp.dstport': connection.get('tcp.dstport')
+        }
 
-        # Iterate over the blacklisted connections and check each source and destination IP
+    def is_blacklisted(self, connection_dict, blacklist):
+        # If the 'blacklist' is a list of dictionaries
+        if isinstance(blacklist, list) and isinstance(blacklist[0], dict):
+            return self.is_in_list(connection_dict, blacklist)
+
+        # If the 'blacklist' is a dictionary
+        elif isinstance(blacklist, dict):
+            return connection_dict == blacklist
+
+        return False
+
+    def is_in_list(self, connection_dict, blacklist):
+        for blacklisted in blacklist:
+            blacklisted_dict = self.connection_to_dict(blacklisted)
+            if connection_dict == blacklisted_dict:
+                return True
+
+        return False
+
+    def check_blacklisted_ips(self, blacklisted, blacklist_file):
+        # Read the blacklist file and make a list of ips 
+        blacklist = self.read_json(blacklist_file)
+
+        blacklisted_ips = [
+            item['ip.src'] for item in blacklist if 'ip.src' in item] + [
+            item['ip.dst'] for item in blacklist if 'ip.dst' in item]
+
+        # Create a set to store printed IP addresses
+        printed_ips = set()
+
+        # Iterate over the blacklisted connections and check each source and
+        # destination IP
         for connection in blacklisted:
             src_ip = connection['ip.src']
             dst_ip = connection['ip.dst']
-            if src_ip in blacklisted_ips:
+            if src_ip in blacklisted_ips and src_ip not in printed_ips:
                 print(f"The source IP address {src_ip} is blacklisted.")
-            if dst_ip in blacklisted_ips:
+                printed_ips.add(src_ip)
+            if dst_ip in blacklisted_ips and dst_ip not in printed_ips:
                 print(f"The destination IP address {dst_ip} is blacklisted.")
+                printed_ips.add(dst_ip)
 
-        

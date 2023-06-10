@@ -22,9 +22,9 @@ def main():
     processor.write_json('../data/tcp_connections.json', tcp)
     
     
-    if args.command == 'get':
-        print('Are you getting this?') 
-    
+    if args.command == 'get' and args.flags:
+        processor.get_tcp_flag_changes(args.src, args.srcport, args.dst, args.dstport)
+        
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':

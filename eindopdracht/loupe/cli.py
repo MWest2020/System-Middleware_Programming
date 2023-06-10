@@ -45,20 +45,23 @@ class CLI:
         )
         
         ## here's where the second commands need to be
+        self.get_parser = self.subparsers.add_parser(
+            'get', help='process get command')
+
         self.get_parser.add_argument(
             '--flags',
-            # action='store_true',
-            help='Tacks changes in TCP flags'    
+            action="store_true",
+            help="Track changes in TCP flags"
         )
-        
+
         self.get_parser.add_argument(
-            '--src', '-s', help='source IP for get command')
+            '--src', help='source IP for get command')
         self.get_parser.add_argument(
-            '--srcport', '-p', help='source IP for get command')
+            '--srcport', help='source port for get command')
         self.get_parser.add_argument(
-            '--dst', '-d', help='source IP for get command')
+            '--dst', help='destination IP for get command')
         self.get_parser.add_argument(
-            '--dstport', '-P', help='source IP for get command')
+            '--dstport', help='destination port for get command')
         
         
     def parse_args(self):

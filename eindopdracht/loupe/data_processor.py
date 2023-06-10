@@ -108,4 +108,10 @@ class DataProcessor:
             if dst_ip in blacklisted_ips and dst_ip not in printed_ips:
                 print(f"The destination IP address {dst_ip} is blacklisted.")
                 printed_ips.add(dst_ip)
+                
+                
+    ## BEYOND BLACK
+    
+    def get_tcp_flag_changes(self, src_ip, src_port, dst_ip, dst_port):
+        print('they see me flagging')
 

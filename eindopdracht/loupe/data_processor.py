@@ -4,7 +4,7 @@ import json
 
 class DataProcessor:
 
-    # TODO : No need for self as argument?
+    
     # @staticmethod
     def read_json(self, file_path):
         # reads and returns json data

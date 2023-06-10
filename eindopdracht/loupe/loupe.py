@@ -20,6 +20,11 @@ def main():
     tcp = processor.get_tcp_connections(capture)
 
     processor.write_json('../data/tcp_connections.json', tcp)
+    
+    
+    if args.command == 'get':
+        print('Are you getting this?') 
+    
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':
@@ -48,7 +53,7 @@ def main():
             # check and print blacklisted ips
             processor.check_blacklisted_ips(
                 blacklisted, '../data/blacklisted_ips.json')
-            # print(blacklisted[0].get())
+            # bla
 
         else:
             # Error: blacklisted command needs specific connection details

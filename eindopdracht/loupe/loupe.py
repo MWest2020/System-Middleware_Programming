@@ -43,8 +43,7 @@ def main():
             # Compare TCP connections against the blacklist
             blacklisted = processor.compare_blacklist(tcp, blacklist)
 
-            print(blacklisted)
-
+          
 
 
             # check and print blacklisted ips
@@ -67,7 +66,7 @@ def main():
         if args.blacklist_file:
             # If a blacklist file is specified, read it
             blacklist = processor.read_json(args.blacklist_file)
-      
+        print(isinstance(blacklist, list))
 
         # Compare TCP connections against the blacklist
         blacklisted = processor.compare_blacklist(tcp, blacklist)

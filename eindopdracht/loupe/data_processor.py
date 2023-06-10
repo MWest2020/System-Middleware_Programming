@@ -58,6 +58,14 @@ class DataProcessor:
                 connection.get('tcp.srcport'),
                 connection.get('ip.dst'),
                 connection.get('tcp.dstport'))
+
+            connection_dict = {
+                'ip.src': connection.get('ip.src'),
+                'tcp.srcport': connection.get('tcp.srcport'),
+                'ip.dst': connection.get('ip.dst'),
+                'tcp.dstport': connection.get('tcp.dstport')
+            }
+
             # If the 'blacklist' is a list of dictionaries
             if isinstance(blacklist, list) and isinstance(blacklist[0], dict):
                 for blacklisted in blacklist:
@@ -69,12 +77,11 @@ class DataProcessor:
                     if connection_tuple == blacklisted_tuple:
                         blacklisted_connections.append(connection)
 
-            # If the 'blacklist' is a tuple
-            elif isinstance(blacklist, tuple):
-                if connection_tuple == blacklist:
-                    print(connections)
+            # If the 'blacklist' is a dictionary
+            elif isinstance(blacklist, dict):
+                if connection_dict == blacklist:
                     blacklisted_connections.append(connection)
-           
+                    
         return blacklisted_connections
 
     def check_blacklisted_ips(self, blacklisted, blacklist_file):

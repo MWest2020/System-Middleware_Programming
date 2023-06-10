@@ -37,6 +37,14 @@ class DataProcessor:
         for packet in data:
             tcp_info = packet["_source"]["layers"]["tcp"]
             ip_info = packet["_source"]["layers"]["ip"]
+            frame = packet["_source"]["layers"]["frame"]
+
+
+            # Add the timestamp from the frame object
+            raw_timestamp = frame['frame.time']
+            timestamp_parts = raw_timestamp.split()
+            cleaned_timestamp = ' '.join(timestamp_parts[:4])
+            tcp_info['timestamp'] = cleaned_timestamp
 
             # Create a TCP connection dictionary and add it to the list
             tcp_connection = {**ip_info, **tcp_info}
@@ -113,5 +121,25 @@ class DataProcessor:
     ## BEYOND BLACK
     
     def get_tcp_flag_changes(self, src_ip, src_port, dst_ip, dst_port):
-        print('they see me flagging')
+        
+        # hardcoded, because otherwise too many arguments (already) in fucntion signature
+        tcp_connections = self.read_json('../data/tcp_connections.json')
+        
+        # filter for specific tcp connections
+        connection_packets = [
+            conn for conn in tcp_connections
+            if (conn['ip.src'] == src_ip
+                and conn['tcp.srcport'] == src_port
+                and conn['ip.dst'] == dst_ip
+                and conn['tcp.dstport'] == dst_port)
+        ]
 
+        printed_timestamp = False
+        for packet in connection_packets:
+            if not printed_timestamp:
+                print(f"Connections are captured on: {packet['timestamp']} GMT")
+                printed_timestamp = True
+            # time relative to capture wireshark. One would need to know that.
+            print(f"Time: {packet['Timestamps']['tcp.time_relative']}, Flags: {packet['tcp.flags']}")
+
+    # def decode_tcp_flags(self, flag)

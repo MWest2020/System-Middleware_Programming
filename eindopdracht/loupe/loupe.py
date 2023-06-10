@@ -6,7 +6,7 @@ from data_processor import DataProcessor
 
 
 def main():
-    print('Hello loupe!')
+    print('Processing Capture!')
     cli = CLI()
     args = cli.parse_args()
 

@@ -1,5 +1,7 @@
 # standard library to work with json
+from datetime import datetime
 import json
+
 
 
 class DataProcessor:
@@ -59,6 +61,50 @@ class DataProcessor:
 
         # Print the extracted TCP connections
         return tcp_connections
+    
+    def get_connection_durations(self, tcp_connections, file_path):
+        connection_times = {}
+
+        for connection in tcp_connections: 
+            connection_id = (
+                connection["ip.src"],
+                connection["tcp.srcport"],
+                connection["ip.dst"],
+                connection["tcp.dstport"]
+            )
+
+            # Parse the timestamp into a datetime object
+            # [:23] hacky solution for cutting off beyond 6 digits (the 3 digits)
+            # really prone to errors if we change the date string 
+        
+            timestamp = datetime.strptime(connection["timestamp"][:23], '%b %d, %Y %H:%M:%S.%f')
+
+            if connection_id not in connection_times:
+                connection_times[connection_id] = [timestamp, timestamp]
+            else:
+                # Update the earliest and latest timestamps for this connection
+                connection_times[connection_id] = [
+                    min(connection_times[connection_id][0], timestamp), 
+                    max(connection_times[connection_id][1], timestamp)
+                ]
+
+        # Calculate the durations
+        connection_durations = {
+            conn_id: (times[1] - times[0]).total_seconds() 
+            for conn_id, times in connection_times.items()
+        }
+
+        print(len(connection_durations))
+        print(type(connection_durations))
+     
+        
+        return connection_durations
+
+
+                
+    
+
+        
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []

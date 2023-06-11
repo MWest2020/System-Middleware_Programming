@@ -44,10 +44,9 @@ class CLI:
             'get', help='process get command'
         )
         
-        ## here's where the second commands need to be
-        ## here's where the second commands need to be
-        self.get_parser = self.subparsers.add_parser(
-            'get', help='process get command')
+        # ## here's where the second commands need to be
+        # self.get_parser = self.subparsers.add_parser(
+        #     'get', help='process get command')
 
         self.get_parser.add_argument(
             '--flags',
@@ -70,6 +69,27 @@ class CLI:
             '--output', '-o', required=True, 
             help='File to which potential attacks should be written')
         
+        ## thirs question
+        self.time_parser = self.subparsers.add_parser(
+        'time', help='Process time duration thresholds')
+
+        self.time_parser.add_argument(
+            '--duration',
+            action="store_true",
+            help="Show duration of each TCP connection"
+        )
+
+        # Add the duration-threshold argument to the 'time' subparser
+        self.time_parser.add_argument(
+            '--duration-threshold',
+            type=float,
+            default=300.0,  # Default value of 5 minutes
+            help="Duration threshold for TCP connections, in seconds"
+        )
+                
+        self.time_parser.add_argument(
+        '--output', '-o', required=False, 
+        help='File to which times connections are written to')        
         
     def parse_args(self):
         return self.parser.parse_args()

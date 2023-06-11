@@ -26,7 +26,19 @@ def main():
         processor.get_tcp_flag_changes(args.src, args.srcport, args.dst, args.dstport)
      
     if args.command == 'scan':
-        processor.scan_dataset_for_attacks(tcp, args.output)    
+        processor.scan_dataset_for_attacks(tcp, args.output)
+        
+    if args.command == 'time':
+        
+        print(f"Output file path: {args.output}, type: {(args.output)}")
+
+        processor.get_connection_durations(tcp, args.output)   
+
+    # WORK ON DURATIONS:
+    
+
+
+
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':

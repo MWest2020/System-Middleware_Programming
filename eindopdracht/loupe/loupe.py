@@ -19,7 +19,7 @@ def main():
     # Get all connections from the capture
     tcp = processor.get_tcp_connections(capture)
 
-    processor.write_json('../data/tcp_connections.json', tcp)
+    processor.write_json('tcp_connections.json', tcp)
     
     
     if args.command == 'get' and args.flags:

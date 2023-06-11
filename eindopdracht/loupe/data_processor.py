@@ -26,7 +26,7 @@ class DataProcessor:
 
     # Writing json.
     def write_json(self, file_path, json_data):
-        with open(file_path, 'w') as f:
+        with open('../data/'+ file_path, 'w') as f:
             json.dump(json_data, f, indent=4)
 
     def get_tcp_connections(self, data):
@@ -133,6 +133,11 @@ class DataProcessor:
             and conn['ip.dst'] == dst_ip
             and (dst_port is None or conn['tcp.dstport'] == dst_port))
         ]
+        
+        # Make sure the packets are ordered by time (if they are not already)
+        # sorting by key for advanced sorting 
+        connection_packets.sort(key=lambda packet: packet['Timestamps']['tcp.time_relative'])
+
 
 
         print(f"Filtered TCP connections: {len(connection_packets)}")
@@ -215,8 +220,7 @@ class DataProcessor:
             if set(set_flags) == {'ACK'}:
                 continue
             
-            if set(set_flags) == {'FIN','ACK'}:
-                continue
+            
             
             attack_name = self.identify_attack_type(set_flags)
             

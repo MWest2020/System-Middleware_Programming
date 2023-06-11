@@ -127,12 +127,15 @@ class DataProcessor:
         
         # filter for specific tcp connections
         connection_packets = [
-            conn for conn in tcp_connections
-            if (conn['ip.src'] == src_ip
-                and conn['tcp.srcport'] == src_port
-                and conn['ip.dst'] == dst_ip
-                and conn['tcp.dstport'] == dst_port)
+        conn for conn in tcp_connections
+        if ((conn) or conn['ip.src'] == src_ip
+            and (src_port is None or conn['tcp.srcport'] == src_port)
+            and conn['ip.dst'] == dst_ip
+            and (dst_port is None or conn['tcp.dstport'] == dst_port))
         ]
+
+
+        print(f"Filtered TCP connections: {len(connection_packets)}")
 
         printed_timestamp = False
         for packet in connection_packets:
@@ -145,7 +148,8 @@ class DataProcessor:
             attack_name = self.identify_attack_type(active_flags)
             
             # time relative to capture wireshark. One would need to know that.
-            print(f"Time: {packet['Timestamps']['tcp.time_relative']}, Flags: {active_flags}, Detected: {attack_name} ")
+            if attack_name is not None:
+                print(f"Time: {packet['Timestamps']['tcp.time_relative']}, Flags: {active_flags}, Detected: {attack_name} ")
 
     def decode_tcp_flags(self, flag_value):
         
@@ -177,20 +181,27 @@ class DataProcessor:
         flags_set = set(flags)
       
         attack_map = {
-            frozenset(['SYN', 'FIN']): "SYN-FIN attack",
-            frozenset(['SYN', 'RST']): "SYN-RST attack",
-            frozenset(['SYN', 'URG']): "SYN-URG attack",
-            frozenset(['FIN', 'ACK']): "Possible FIN-ACK attack",
-            frozenset(['FIN', 'PSH', 'URG']): "FIN-PSH-URG attack",
-            frozenset(['PSH', 'URG']): "PSH-URG attack",
-            frozenset(['RST', 'PSH']): "RST-PSH attack",
-            frozenset(['ACK', 'FIN', 'RST']): "ACK-FIN-RST attack",
-            frozenset(['ACK', 'PSH', 'FIN']): "ACK-PSH-FIN attack",
+            frozenset(['SYN', 'FIN']): "Anomaly detected: SYN-FIN",
+            frozenset(['SYN', 'ACK']): "Check for previous SYN.",
+            frozenset(['SYN', 'RST']): "Anomaly detected: SYN-RST",
+            frozenset(['SYN', 'URG']): "Anomaly detected: SYN-URG ",
+            # may be needed if long streak occurs
+            frozenset(['FIN', 'ACK']): "Possible FIN-ACK attack, check for previous FIN or RST",
+            frozenset(['FIN', 'PSH', 'URG']): "Anomaly detected: FIN-PSH-URG. Possible Christmas Tree",
+            frozenset(['RST', 'ACK']): "Check for previous SYN. Possible TCP RST attack.",
+            frozenset(['PSH', 'URG']): "Uncommon: PSH-URG",
+            frozenset(['ACK', 'PSH', 'RST','FIN']): "ACK-PSH-RST-FIN Flood attack detected",
+            frozenset(['ACK', 'FIN', 'RST']): "Uncommon: ACK-FIN-RST attack, may need to inspect further",
+            frozenset(['ACK', 'PSH', 'FIN']): "Uncommon: ACK-PSH-FIN, may need to inspect further",
         }
+        
+        detected_attacks = []
+        
         for attack_flags, attack_name in attack_map.items():
             if attack_flags.issubset(flags_set):
-               return attack_name
-        return None
+               detected_attacks.append(attack_name)
+               
+        return detected_attacks if detected_attacks else None
 
     
     def scan_dataset_for_attacks(self, data, filename):
@@ -204,6 +215,8 @@ class DataProcessor:
             if set(set_flags) == {'ACK'}:
                 continue
             
+            if set(set_flags) == {'FIN','ACK'}:
+                continue
             
             attack_name = self.identify_attack_type(set_flags)
             

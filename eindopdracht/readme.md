@@ -5,61 +5,134 @@ Student number : 500836508
 
 # Probleemstelling
 
+(#TODO: probleemstelling aanpassen)
 Er moet een Command Line Interface programma geschreven worden om verdachte netwerkactiviteit op te sporen. De opdrachtgever wilt snel door middel van commando's specifieke analyses uit kunnen voeren. Denk hierbij aan een lijst van protocollen die door middel van `loupe --list-protocols dataset.json` een uitdraai geven van die protocollen. Door dit in de vorm van een CLI te realiseren zijn deze commando's ook te pipen met bestaande linux commondo's, zoals `>> list_protocols_01_05_2023.txt`.
 
 De applicatie dient opgeleverd te worden inclusief tests en documentatie.
 
+- `loupe.py --help` geeft een overzicht van alle commando's en opties.
+
+- `loupe.py dataset.json` als initiële commando om de dataset te laden en de TCP-verbindingen eruit te halen. Een eventuele blacklist moet zelf aangemaakt worden. Er is een voorbeeld aanwezig in `./data/`
+
 ## Vraag 1
 
-Kruis-verifieer specifieke TCP/IP addressen met bekende kwaadwillende, of gewhiteliste adressen door een commando te gebruiken zoals `loupe.py {dataset} --blacklist {blacklist.json}`
+Kruis-verifieer TCP/IP-adressen verifiëren door ze te kruis-verifiëren met bekende kwaadwillende adressen of adressen op de whitelist. U kunt dit doen door het volgende commando te gebruiken: `loupe.py {dataset} blacklist --blacklist_file {blacklist}`.
 
-| note: dit werkt met een textbestand met daarin een list met tuples met ip-adressen of door een ip-adres op te geven:
- `loupe.py {blacklist} --src {source ip} --srcport {source port} --dst{destination ip} --dstport {destination port}`.
+Houd er rekening mee dat dit commando werkt met een JSON-bestand dat een lijst bevat van tuples met IP-adressen. U kunt ook specifieke verbindingen opgeven met behulp van de volgende syntaxis: `loupe.py {dataset} blacklisted --src {source IP} --srcport {source port} --dst {destination IP} --dstport {destination port}`.
 
- Dit werkt ook met shortform:
+Bovendien kunt u afkortingen gebruiken om het commando te vereenvoudigen, zoals te zien is in dit voorbeeld: `loupe.py {dataset.json} blacklisted -s {src IP} -p {source port} -d {destination IP} -P {destination port}`.
 
-`loupe.py {blacklist} -s {source ip} -p {source port} -d{destination ip} -P {destination port}`.
-
-or simply a list:
-
-`loupe.py {dataset} [{source ip}, {source port}, {destination ip}, {destination port}]`.
-
-Everything also works with whitelists. Just replace the word `blacklist` to `whitelist`
+Met deze krachtige tool kunt u snel en efficiënt de beveiliging van uw netwerk analyseren.
 
 ## Vraag 2
 
-Geef een overzicht van alle ongebruikelijkheden van een specifiek pakket. Denk hierbij aan TCP (analysis) flags. `loupe flag {specifics}`
+Het idee van deze vraag is om inzicht krijgen in de vlaggen (flags) van TCP-verbindingen, zodat u snel ongebruikelijke situaties kunt detecteren, zoals aanvallen of programmeerfouten.
 
-### herziende versie vraag 2 (reden: ongebruikelijkheden te vaag)
+Belangrijke opmerking: Momenteel wordt er nogal omslachtig omgegaan met tijdstempels. Deze worden opgesplitst en later weer samengevoegd, wat eigenlijk niet de bedoeling is. Deze functionaliteit werkt echter momenteel alleen binnen de GMT-tijdzone.
 
-Geef een overzicht van alle ongebruikelijkheden van een specifiek pakket. Denk hierbij aan TCP (analysis) flags. `loupe check TCP {specifics}`
+Daarnaast toont de applicatie de TCP-vlaggen nu in hexadecimale notatie:
 
-Ongebruikelijkheden (specifics)
+| Bit (binary) | Hex | Flag |
+|--------------|-----|------|
+| 00000001     | 01  | FIN  |
+| 00000010     | 02  | SYN  |
+| 00000100     | 04  | RST  |
+| 00001000     | 08  | PSH  |
+| 00010000     | 10  | ACK  |
+| 00100000     | 20  | URG  |
+| 01000000     | 40  | ECE  |
+| 10000000     | 80  | CWR  |
 
-- SYN : herhaalde SYN flags. Indiceert mogelijke SYN flood attacks
-- [SYN-RST] :
-- [URG-RST](https://kb.mazebolt.com/wp-content/uploads/2018/11/Screenshot-from-2018-11-04-14-21-50.png): kan gebruikt worden in een URG-RST flood. Niet van toepssing op onze capture.
-- [RST](https://robertheaton.com/2020/04/27/how-does-a-tcp-reset-attack-work/) : Kan gebruikt worden in een reset attack. Sowieso interessant waarom abrupt de verbinding verbroken wordt.
-- [ACK-PSH](https://kb.mazebolt.com/knowledgebase/ack-psh-flood/). ACK-PSH kan gebruikt worden als een aanval, of om een grotere aanval te maskeren.
-- [SYN-FIN]:
-- [FIN-ACK]: Wel FIN, maar ACK niet (volgens mij in deze cpture niet aan de orde)
-- [ACK-PSH-FIN](https://kb.mazebolt.com/knowledgebase/ack-psh-fin-flood/): Deze combi kan een FLOOD attack zijn.
+De volgende combinaties zijn als illegaal gemarkeerd in deze applicatie:
 
-de bedoeling is dat de gebruiker met deze optie snel de TCP-flaggen kan analyseren en daarmee tijd scheelt. Daarnaast kijkt vraag 2 naar `tcp.flag.str`, wat aangeeft welke flags aan staan. Zoals `ACK-PUSH`.
+Herhaalde SYN: print("SYN flood attack") #TODO
+{'SYN', 'FIN'}: "Anomaly detected: SYN-FIN",
+['SYN', 'ACK']: "Check for previous SYN.",
+{'SYN', 'RST'}: "Anomaly detected: SYN-RST",
+{'SYN', 'URG'}: "Anomaly detected: SYN-URG ",
+
+may be needed if long streak occurs
+{'FIN', 'ACK'}: "Possible FIN-ACK attack, check for previous FIN or RST",
+{'FIN', 'PSH', 'URG'}: "Anomaly detected: FIN-PSH-URG. Possible Christmas Tree",
+{'RST', 'ACK'}: "Check for previous SYN. Possible TCP RST attack.",
+{'PSH', 'URG'}: "Uncommon: PSH-URG",
+{'ACK', 'PSH', 'RST','FIN'}: "ACK-PSH-RST-FIN Flood attack detected",
+{'ACK', 'FIN', 'RST'}: "Uncommon: ACK-FIN-RST attack, may need to inspect further",
+{'ACK', 'PSH', 'FIN'}: "Uncommon: ACK-PSH-FIN, may need to inspect further",
+
+Om deze functionaliteit te testen, voer het volgende commando uit:
+
+`python loupe.py dataset.json get --flags --src 192.168.0.1 --srcport 37664 --dst 192.168.0.34 --dstport 443`
+
+In dit voorbeeld is de dataset.json aangepast zodat de applicatie een SYN-RST-aanval detecteert.
+
+Bovendien kunt u het volgende commando gebruiken om de eerste set gegevens te scannen op vlaggen:
+
+`python loupe.py dataset.json scan -o attacks.json`
+
+Dit commando doorloopt de gegevensset en scant deze op verdachte vlaggen. De uitvoer wordt opgeslagen in een JSON-bestand met de naam "attacks.json".
+
+Met deze handige tool kunt u snel mogelijke aanvallen en afwijkend gedrag identificeren in netwerkverkeer. De Flag Analyzer CLI biedt een efficiënte manier om de beveiliging van uw systeem te verbeteren en mogelijke bedreigingen te detecteren.
 
 ## Vraag 3
 
-Geef een overzicht van de `ws.expert.message` velden van een specifieke `timestamp`, `ip.src` / `ip.dst` of `tcp.dst` door middel van een commando als `loupe {specifics} --list-ws-exp-msg`. Dit geeft het aantal messages en de messages zelf weer.
+Om de duur van TCP-verbindingen te berekenen, kunt u de volgende opdracht gebruiken:
 
-### herziende versie vraag 3 (reden: waarom ws.expert.messages)
+python loupe.py dataset.json time --output duration.json
 
-`ws.expert.message` velden zijn WireShark messages die inzicht geven in mogelijke dreigigen. Gedurende ontwikkeling zal ik kijken naar de complexiteit, indien het te simpel wordt, verzin k nog een vraag erbij.
+Dit commando berekent de duur van elke TCP-verbinding in uw dataset en slaat de resultaten op in het JSON-bestand "duration.json".
+
+U kunt ook een drempelwaarde instellen om alleen verbindingen met een bepaalde minimale duur op te nemen in de analyse. Bijvoorbeeld:
+
+`python loupe.py dataset.json time --duration-threshold 300.0 --output duration.json`
+
+Dit commando berekent de duur van de TCP-verbindingen en neemt alleen verbindingen op die langer duren dan 300 seconden (5 minuten). De resultaten worden opgeslagen in het JSON-bestand "duration.json".
+
+Als u wilt filteren op een blacklist van IP-adressen, kunt u de volgende opdracht gebruiken:
+
+`python loupe.py dataset.json time --duration-threshold 300.0 --blacklist_file blacklisted_ips.json --output duration.json`
+
+Dit commando berekent de duur van de TCP-verbindingen, neemt alleen verbindingen op die langer duren dan 300 seconden en niet voorkomen in de blacklist van IP-adressen in het bestand "blacklisted_ips.json". De resultaten worden opgeslagen in het JSON-bestand "duration.json".
+
+Met deze functionaliteit kunt u de duur van TCP-verbindingen analyseren en specifieke drempelwaarden en zwarte lijsten toepassen om de resultaten te verfijnen.
 
 ## Installatie
 
-(work in progress en voornamelijk notities)
+- `chmod +x loupe.py` + de comment `#! /usr/bin/env python3`, zodat je het kan runnen met `./loupe.py` ipv `python loupe.py`. Dit werkt alleen op Linux. Op Windows moet je `python loupe.py` gebruiken.
 
-- `chmod +x main.py` + de comment `#! /usr/bin/env python3`, zodat ik niet telkens python3 ervoor moet zetten
+EDIT: pep8 is deprecated, gebruik pycodestyle, het installatiecommando hiervoor is : `pip install pycodestyle` (flake8 kan ook)
 
-- autopep8 --in-place -a -a filename zet alles recht
-- pep8 checkt of het goed staat (lines niet te lang bij.)- onderzoeken hoe en wat Sphinx + readthedocs, extra smooth
+maak een `__init__.py` file aan in de `loupe` folder, zodat je de `loupe` folder kan importeren als module. Maak een `__init__.py` file aan in de `tests` folder, zodat je in de `tests` folder de classes uit `loupe`kan importeren als module.
+
+## Good to know's
+
+- `autopep8 --in-place -a -a filename` zet alles recht (tip: `*.py`)
+- `pep8 *.py` checkt of het goed staat (lines niet te lang bij.).
+- pep8 is deprecated, gebruik pycodestyle, het installatiecommando hiervoor is : `pip install pycodestyle` (flake8 kan ook)
+
+ het commando voor pycodestyle is `python -m pycodestyle --max-line-length=99 *.py`
+
+## Tests
+
+Alle test staan in de `tests` folder. De tests zijn geschreven volgens het AAA-principe (Arrange, Act, Assert), of ookwel Prepare, Execute, Assert. De tests zijn geschreven met de Pytest library.  
+
+Deze library is te isntalleren met het commando `pip install -U pytest`. De tests zijn te runnen met het commando `pytest`. Op Windows kan het zijn dat het commando `python -m pytest` gebruikt moet worden. Dit is niet getest op MacOS, maar zou hetzelfde moeten werken als op Linux.
+
+`python -m pytest *.py` runt alle tests in de huidige folder.
+
+## Sources / Referenties
+
+Hier zijn bronnen voor informatie over hou sommige aspecten werken. Dit is voornamelijk voor mijzelf, maar kan ook handig zijn voor de lezer.
+
+### Command line
+
+[argparse](https://docs.python.org/3/library/argparse.html)
+
+### Monkeypatch
+
+[class mocks](https://docs.pytest.org/en/7.1.x/how-to/monkeypatch.html)
+
+### JSON
+
+[JSON viewer](https://jsonviewer.stack.hu/)
+load your JSON here and not mess up your memory every time you want to check your JSON

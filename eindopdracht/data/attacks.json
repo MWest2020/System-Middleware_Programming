@@ -1,0 +1,6626 @@
+[
+    {
+        "time": "0.212952000",
+        "connection": [
+            "192.168.0.1",
+            "37622",
+            "192.168.0.34",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.231947000",
+        "connection": [
+            "192.168.0.34",
+            "443",
+            "192.168.0.1",
+            "37622"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "10.015502000",
+        "connection": [
+            "192.168.0.15",
+            "52427",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000012000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52428"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "30.996410000",
+        "connection": [
+            "192.168.0.1",
+            "443",
+            "192.168.0.57",
+            "43446"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000040000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52518"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.006751000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36174"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.249841000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36174"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.249867000",
+        "connection": [
+            "192.168.0.1",
+            "36174",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "11.763100000",
+        "connection": [
+            "192.168.0.53",
+            "27892",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "6.333412000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.8",
+            "13809"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "6.506235000",
+        "connection": [
+            "192.168.1.8",
+            "13809",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000029000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46988"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000018000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46990"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000039000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54222"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.246168000",
+        "connection": [
+            "192.168.0.11",
+            "60873",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.246216000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60873"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007637000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52428"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000031000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.16",
+            "44610"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.009275000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36176"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.261255000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52518"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.262247000",
+        "connection": [
+            "192.168.1.6",
+            "52518",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.236777000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36176"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.236818000",
+        "connection": [
+            "192.168.0.1",
+            "36176",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.006890000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36180"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.249170000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36180"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.249250000",
+        "connection": [
+            "192.168.0.1",
+            "36180",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.007961000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36182"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.003476000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46990"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.004088000",
+        "connection": [
+            "192.168.0.7",
+            "46990",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.045711000",
+        "connection": [
+            "192.168.0.7",
+            "46988",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.045768000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46988"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.255524000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36182"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.255562000",
+        "connection": [
+            "192.168.0.1",
+            "36182",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "1.892148000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.16",
+            "44610"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.000038000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60874"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.018388000",
+        "connection": [
+            "192.168.0.34",
+            "443",
+            "192.168.0.1",
+            "37640"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.021201000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54222"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.022260000",
+        "connection": [
+            "192.168.0.8",
+            "54222",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.272733000",
+        "connection": [
+            "192.168.0.1",
+            "37640",
+            "192.168.0.34",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.291025000",
+        "connection": [
+            "192.168.0.34",
+            "443",
+            "192.168.0.1",
+            "37640"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "15.007455000",
+        "connection": [
+            "192.168.0.11",
+            "60872",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "15.007513000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60872"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000015000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60875"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "9.999482000",
+        "connection": [
+            "192.168.0.15",
+            "52428",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000011000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52429"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000279000",
+        "connection": [
+            "192.168.0.27",
+            "80",
+            "192.168.0.1",
+            "57474"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.001592000",
+        "connection": [
+            "192.168.0.27",
+            "80",
+            "192.168.0.1",
+            "57474"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.001642000",
+        "connection": [
+            "192.168.0.1",
+            "57474",
+            "192.168.0.27",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "17.744564000",
+        "connection": [
+            "192.168.0.40",
+            "57246",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000017000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "7138"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "17.744726000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "57246"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000023000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52520"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.007231000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36190"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.252454000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36190"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.274651000",
+        "connection": [
+            "192.168.0.1",
+            "36190",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.771227000",
+        "connection": [
+            "192.168.0.16",
+            "44610",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000032000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46992"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000011000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46994"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "2.378091000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "7138"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "5.002699000",
+        "connection": [
+            "192.168.0.11",
+            "60875",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.002768000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60875"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000020000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60876"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.007006000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52429"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000014000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.3",
+            "60074"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.369546000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60874"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.370076000",
+        "connection": [
+            "192.168.0.11",
+            "60874",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000024000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54224"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000033000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.463494000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52520"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.464525000",
+        "connection": [
+            "192.168.1.6",
+            "52520",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000038000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.001676000",
+        "connection": [
+            "192.168.0.7",
+            "46994",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.001846000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46994"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.009634000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46992"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.010220000",
+        "connection": [
+            "192.168.0.7",
+            "46992",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000039000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60877"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.019609000",
+        "connection": [
+            "192.168.0.12",
+            "443",
+            "192.168.0.1",
+            "58320"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.002977000",
+        "connection": [
+            "192.168.0.11",
+            "60876",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.003034000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60876"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000013000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60878"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "10.014500000",
+        "connection": [
+            "192.168.0.15",
+            "52429",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000010000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52433"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.227353000",
+        "connection": [
+            "192.168.0.1",
+            "58320",
+            "192.168.0.12",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.015807000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54224"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.016658000",
+        "connection": [
+            "192.168.0.8",
+            "54224",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.246544000",
+        "connection": [
+            "192.168.0.12",
+            "443",
+            "192.168.0.1",
+            "58320"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.714047000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.3",
+            "60074"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.716118000",
+        "connection": [
+            "192.168.1.3",
+            "60074",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.021535000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.225511000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.429509000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000037000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52522"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.007033000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36196"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.837501000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.274043000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36196"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.274075000",
+        "connection": [
+            "192.168.0.1",
+            "36196",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.023763000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "6.653519000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.225772000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.430080000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000037000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46996"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000025000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.13",
+            "57706"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.837970000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.002534000",
+        "connection": [
+            "192.168.0.11",
+            "60878",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.002622000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60878"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000021000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60879"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.006695000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52433"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "6.653725000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.536029000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60877"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.536433000",
+        "connection": [
+            "192.168.0.11",
+            "60877",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "8.289497000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000034000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54228"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "8.289883000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.282053000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52522"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.282827000",
+        "connection": [
+            "192.168.1.6",
+            "52522",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "11.561510000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "4.790568000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.13",
+            "57706"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007212000",
+        "connection": [
+            "192.168.0.7",
+            "46996",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007268000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46996"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000031000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "45184"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000021000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60880"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.018406000",
+        "connection": [
+            "192.168.0.30",
+            "443",
+            "192.168.0.1",
+            "36310"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.213500000",
+        "connection": [
+            "192.168.0.1",
+            "36310",
+            "192.168.0.30",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.231648000",
+        "connection": [
+            "192.168.0.30",
+            "443",
+            "192.168.0.1",
+            "36310"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "11.565764000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "10.000446000",
+        "connection": [
+            "192.168.0.15",
+            "52433",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000016000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52435"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.018574000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54228"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.019457000",
+        "connection": [
+            "192.168.0.8",
+            "54228",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "7.629887000",
+        "connection": [
+            "192.168.0.13",
+            "57706",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000037000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52524"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.007923000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36206"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.247755000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36206"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.247776000",
+        "connection": [
+            "192.168.0.1",
+            "36206",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000033000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "42403"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000039000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46998"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "22.260247000",
+        "connection": [
+            "192.168.0.40",
+            "7138",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.227230000",
+        "connection": [
+            "192.168.0.11",
+            "60880",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.227321000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60880"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "18.105508000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "44412"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.510785000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52435"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "18.109786000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "36040"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000028000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "45264"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000018000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54230"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.259340000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52524"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.260306000",
+        "connection": [
+            "192.168.1.6",
+            "52524",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.005359000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "42403"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007532000",
+        "connection": [
+            "192.168.0.7",
+            "46998",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007621000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "46998"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000031000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60881"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000000000",
+        "connection": [
+            "192.168.0.1",
+            "37664",
+            "192.168.0.34",
+            "443"
+        ],
+        "flags": [
+            "SYN",
+            "RST"
+        ],
+        "attack_name": [
+            "Anomaly detected: SYN-RST"
+        ]
+    },
+    {
+        "time": "0.008150000",
+        "connection": [
+            "192.168.0.34",
+            "443",
+            "192.168.0.1",
+            "37664"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.175795000",
+        "connection": [
+            "192.168.0.1",
+            "37664",
+            "192.168.0.34",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.183805000",
+        "connection": [
+            "192.168.0.34",
+            "443",
+            "192.168.0.1",
+            "37664"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "15.006518000",
+        "connection": [
+            "192.168.0.11",
+            "60879",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "15.006580000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60879"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000023000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60882"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "10.014469000",
+        "connection": [
+            "192.168.0.15",
+            "52435",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000009000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52437"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "11.121839000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "45184"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000010000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.9",
+            "43130"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.010479000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.247",
+            "45264"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.015690000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54230"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.016911000",
+        "connection": [
+            "192.168.0.8",
+            "54230",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000032000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.76",
+            "35991"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000030000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52527"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.006885000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36216"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.222227000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36216"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.222256000",
+        "connection": [
+            "192.168.0.1",
+            "36216",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "13.726569000",
+        "connection": [
+            "192.168.0.40",
+            "45184",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000032000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47000"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.185105000",
+        "connection": [
+            "192.168.0.11",
+            "60881",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.185218000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60881"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.006655000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52437"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000027000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.21",
+            "47968"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.052311000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.9",
+            "43130"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000033000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.76",
+            "57166"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000040000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "61864"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000034000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54232"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.005256000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.76",
+            "35991"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.232128000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52527"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.233157000",
+        "connection": [
+            "192.168.1.6",
+            "52527",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007113000",
+        "connection": [
+            "192.168.0.7",
+            "47000",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007188000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47000"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "2.595304000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "61864"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.000029000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60883"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.007009000",
+        "connection": [
+            "192.168.0.22",
+            "443",
+            "192.168.0.1",
+            "51928"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.171092000",
+        "connection": [
+            "192.168.0.1",
+            "51928",
+            "192.168.0.22",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.178615000",
+        "connection": [
+            "192.168.0.22",
+            "443",
+            "192.168.0.1",
+            "51928"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "10.000487000",
+        "connection": [
+            "192.168.0.15",
+            "52437",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000011000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52438"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.009431000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.76",
+            "57166"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.019891000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54232"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.020706000",
+        "connection": [
+            "192.168.0.8",
+            "54232",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000036000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52529"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.008239000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36224"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.240744000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36224"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.240770000",
+        "connection": [
+            "192.168.0.1",
+            "36224",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "7.779736000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.21",
+            "47968"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000021000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.57",
+            "55102"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "12.690065000",
+        "connection": [
+            "192.168.0.9",
+            "43130",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000036000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47006"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000011000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47008"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "7.911597000",
+        "connection": [
+            "192.168.0.40",
+            "61864",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "15.006977000",
+        "connection": [
+            "192.168.0.11",
+            "60882",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "15.007065000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60882"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000017000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60884"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.341833000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60883"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.342514000",
+        "connection": [
+            "192.168.0.11",
+            "60883",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.003636000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52438"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000032000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54234"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.250185000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52529"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.251114000",
+        "connection": [
+            "192.168.1.6",
+            "52529",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000038000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.57",
+            "28344"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.389986000",
+        "connection": [
+            "192.168.0.57",
+            "55102",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.390160000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.57",
+            "55102"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.001277000",
+        "connection": [
+            "192.168.0.7",
+            "47008",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.001460000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47008"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.005978000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47006"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.006516000",
+        "connection": [
+            "192.168.0.7",
+            "47006",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000034000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60885"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000035000",
+        "connection": [
+            "192.168.0.1",
+            "443",
+            "192.168.0.53",
+            "53042"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "10.014479000",
+        "connection": [
+            "192.168.0.15",
+            "52438",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000017000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52441"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.008190000",
+        "connection": [
+            "192.168.0.22",
+            "443",
+            "192.168.0.1",
+            "51936"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.861588000",
+        "connection": [
+            "192.168.0.1",
+            "51936",
+            "192.168.0.22",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.869023000",
+        "connection": [
+            "192.168.0.22",
+            "443",
+            "192.168.0.1",
+            "51936"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000267000",
+        "connection": [
+            "192.168.0.27",
+            "80",
+            "192.168.0.1",
+            "57518"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.001734000",
+        "connection": [
+            "192.168.0.27",
+            "80",
+            "192.168.0.1",
+            "57518"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.001778000",
+        "connection": [
+            "192.168.0.1",
+            "57518",
+            "192.168.0.27",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "17.344965000",
+        "connection": [
+            "192.168.0.21",
+            "47968",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000027000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "48136"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000022000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52531"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.006692000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36234"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.014246000",
+        "connection": [
+            "192.168.0.8",
+            "54234",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.014324000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54234"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.261789000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36234"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.261828000",
+        "connection": [
+            "192.168.0.1",
+            "36234",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000029000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47010"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000016000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47012"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "10.004166000",
+        "connection": [
+            "192.168.0.11",
+            "60884",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "10.004254000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60884"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000037000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60886"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "5.003956000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52441"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.008816000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36236"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "3.239983000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.40",
+            "48136"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.316361000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36236"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.316416000",
+        "connection": [
+            "192.168.0.1",
+            "36236",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "6.658992000",
+        "connection": [
+            "192.168.0.11",
+            "60885",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "6.659047000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60885"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.006845000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36240"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.203813000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36240"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.203890000",
+        "connection": [
+            "192.168.0.1",
+            "36240",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.008092000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36242"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.211735000",
+        "connection": [
+            "192.168.0.17",
+            "80",
+            "192.168.0.1",
+            "36242"
+        ],
+        "flags": [
+            "FIN",
+            "PSH",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST",
+            "Uncommon: ACK-PSH-FIN, may need to inspect further"
+        ]
+    },
+    {
+        "time": "0.211774000",
+        "connection": [
+            "192.168.0.1",
+            "36242",
+            "192.168.0.17",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.271615000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.1.6",
+            "52531"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.285406000",
+        "connection": [
+            "192.168.1.6",
+            "52531",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000033000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.8",
+            "54236"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "9.057949000",
+        "connection": [
+            "192.168.0.1",
+            "443",
+            "192.168.0.53",
+            "53042"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.001164000",
+        "connection": [
+            "192.168.0.7",
+            "47012",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.001295000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47012"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.007852000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.7",
+            "47010"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.008387000",
+        "connection": [
+            "192.168.0.7",
+            "47010",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000035000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60887"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.019617000",
+        "connection": [
+            "192.168.0.12",
+            "443",
+            "192.168.0.1",
+            "58372"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.228597000",
+        "connection": [
+            "192.168.0.1",
+            "58372",
+            "192.168.0.12",
+            "443"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.247208000",
+        "connection": [
+            "192.168.0.12",
+            "443",
+            "192.168.0.1",
+            "58372"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.003077000",
+        "connection": [
+            "192.168.0.11",
+            "60886",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "5.003157000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60886"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000021000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.11",
+            "60888"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "9.998336000",
+        "connection": [
+            "192.168.0.15",
+            "52441",
+            "192.168.0.1",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000009000",
+        "connection": [
+            "192.168.0.1",
+            "80",
+            "192.168.0.15",
+            "52445"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000173000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.67",
+            "54219"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000161000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.67",
+            "45112"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000845000",
+        "connection": [
+            "10.128.0.67",
+            "54219",
+            "192.168.1.9",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000084000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.55",
+            "33037"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000087000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.55",
+            "51727"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000724000",
+        "connection": [
+            "10.128.0.55",
+            "51727",
+            "192.168.1.9",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000066000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.68",
+            "45276"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000068000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.68",
+            "37092"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000065000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.56",
+            "53450"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000052000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.56",
+            "47341"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000066000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.52",
+            "44019"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000054000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.52",
+            "39637"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000520000",
+        "connection": [
+            "10.128.0.56",
+            "53450",
+            "192.168.1.9",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000071000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.53",
+            "47416"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000028000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.53",
+            "47086"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000076000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.77",
+            "48961"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000036000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.77",
+            "44039"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000070000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.96",
+            "54145"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000050000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.96",
+            "54748"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000066000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.95",
+            "60287"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000044000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.95",
+            "39202"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.008374000",
+        "connection": [
+            "10.128.0.68",
+            "45276",
+            "192.168.1.9",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000067000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.97",
+            "35258"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000030000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.97",
+            "37607"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000063000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.54",
+            "41422"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000048000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.54",
+            "38474"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000059000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.58",
+            "44077"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000042000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.58",
+            "35608"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000056000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.51",
+            "48936"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000030000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.51",
+            "53268"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.011207000",
+        "connection": [
+            "10.128.0.52",
+            "44019",
+            "192.168.1.9",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000068000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.87",
+            "57546"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000051000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.87",
+            "51386"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000064000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.63",
+            "58448"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000031000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.63",
+            "47224"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000060000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.86",
+            "40994"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000018000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.86",
+            "60049"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000059000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.98",
+            "37584"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000041000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.98",
+            "36467"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.50",
+            "54704"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000007000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.50",
+            "48260"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000069000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.94",
+            "59866"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000060000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.94",
+            "37104"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000076000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.60",
+            "43859"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000066000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.60",
+            "60848"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000070000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.65",
+            "33492"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000032000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.65",
+            "50393"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000069000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.61",
+            "49489"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000051000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.61",
+            "45004"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000074000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.64",
+            "54257"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000044000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.64",
+            "49758"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000073000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.76",
+            "44060"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000055000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.76",
+            "56475"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000073000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.62",
+            "57785"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000068000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.62",
+            "60985"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000073000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.91",
+            "35216"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000057000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.91",
+            "38190"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000064000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.70",
+            "56422"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000051000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.70",
+            "50753"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000056000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.69",
+            "38180"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000036000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.69",
+            "46779"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000060000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.59",
+            "33967"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000043000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.59",
+            "42947"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000049000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.93",
+            "46089"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000038000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.93",
+            "38057"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000059000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.89",
+            "48982"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000039000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.89",
+            "35344"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000053000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.71",
+            "49642"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000036000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.71",
+            "49045"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000057000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.81",
+            "59779"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000035000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.81",
+            "60220"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000064000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.90",
+            "53283"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000048000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.90",
+            "60981"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000060000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.80",
+            "33901"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000043000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.80",
+            "50146"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000062000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.72",
+            "57668"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000042000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.72",
+            "48241"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000075000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.66",
+            "35825"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000059000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.66",
+            "49209"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000065000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.78",
+            "54027"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000049000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.78",
+            "37994"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000054000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.75",
+            "58081"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000035000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.75",
+            "59394"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000072000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.57",
+            "50470"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000052000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.57",
+            "36659"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000064000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.88",
+            "50948"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000036000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.88",
+            "33222"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000062000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.82",
+            "44318"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000039000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.82",
+            "51034"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000065000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.79",
+            "46615"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000052000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.79",
+            "45417"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000056000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.99",
+            "57562"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000039000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.99",
+            "60460"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000063000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.85",
+            "43800"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000048000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.85",
+            "44746"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000067000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.83",
+            "40992"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000051000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.83",
+            "47786"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000060000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.84",
+            "56069"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000034000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.84",
+            "44959"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000068000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.92",
+            "33117"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000052000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.92",
+            "33058"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000057000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.73",
+            "56750"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000018000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.73",
+            "57071"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000072000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.74",
+            "48386"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000058000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.74",
+            "33056"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.4",
+            "39804"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.2",
+            "50397"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.5",
+            "47616"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.22",
+            "38988"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.21",
+            "34501"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.23",
+            "35985"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000077000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.100",
+            "55118"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000063000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.100",
+            "51374"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.36",
+            "33301"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000055000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.138",
+            "33926"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000049000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.106",
+            "60239"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.142086000",
+        "connection": [
+            "10.128.0.53",
+            "47416",
+            "192.168.1.9",
+            "80"
+        ],
+        "flags": [
+            "FIN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Possible FIN-ACK attack, check for previous FIN or RST"
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.10",
+            "55689"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000066000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.110",
+            "58380"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.45",
+            "46525"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.50",
+            "52455"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000063000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.111",
+            "39511"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000061000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.126",
+            "60144"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.16",
+            "53387"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000003000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.15",
+            "55506"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000061000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.142",
+            "51245"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000052000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.112",
+            "56125"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000057000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.109",
+            "38898"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000058000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.114",
+            "34166"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.17",
+            "58144"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000064000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.107",
+            "38621"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000052000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.115",
+            "60770"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.3",
+            "49705"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000053000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.120",
+            "55149"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000004000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.25",
+            "56332"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.20",
+            "49483"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000061000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.133",
+            "44597"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    },
+    {
+        "time": "0.000002000",
+        "connection": [
+            "192.168.1.9",
+            "80",
+            "10.128.0.26",
+            "60755"
+        ],
+        "flags": [
+            "SYN",
+            "ACK"
+        ],
+        "attack_name": [
+            "Check for previous SYN."
+        ]
+    }
+]

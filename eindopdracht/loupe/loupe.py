@@ -20,25 +20,31 @@ def main():
     tcp = processor.get_tcp_connections(capture)
 
     processor.write_json('tcp_connections.json', tcp)
-    
-    
+
     if args.command == 'get' and args.flags:
-        processor.get_tcp_flag_changes(args.src, args.srcport, args.dst, args.dstport)
-     
+        processor.get_tcp_flag_changes(
+            args.src, args.srcport, args.dst, args.dstport)
+
     if args.command == 'scan':
         processor.scan_dataset_for_attacks(tcp, args.output)
-        
+
     if args.command == 'time':
-        
-        print(f"Output file path: {args.output}, type: {(args.output)}")
+        connection_durations = processor.get_connection_durations(
+            tcp, args.output)
+        long_connections = processor.get_long_connections(
+            connection_durations, args.duration_threshold)
 
-        processor.get_connection_durations(tcp, args.output)   
+        print(
+            f"The following connections are longer than {args.duration_threshold}:")
+        print(f"{long_connections}")
 
-    # WORK ON DURATIONS:
-    
-
-
-
+        if args.blacklist_file:
+            # If a blacklist file is specified, read it
+            blacklist = processor.read_json(args.blacklist_file)
+            threats = processor.correlate_with_blacklist(
+                long_connections, blacklist)
+            print(threats)
+            # processor.write_json('potential_threats.json', threats)
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':
@@ -65,7 +71,7 @@ def main():
             # check and print blacklisted ips
             processor.check_blacklisted_ips(
                 blacklisted, '../data/blacklisted_ips.json')
-          
+
         else:
             # Error: blacklisted command needs specific connection details
             print(

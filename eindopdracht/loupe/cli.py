@@ -9,41 +9,32 @@ class CLI:
         # Define a subparser for the blacklist command
         self.subparsers = self.parser.add_subparsers(dest='command')
 
-        ## For `blacklist` as a command taking a filename as an argument
+        # For `blacklist` as a command taking a filename as an argument
         self.blacklist_parser = self.subparsers.add_parser(
             'blacklist', help='process blacklist')
         self.blacklist_parser.add_argument(
             '--blacklist_file', help='the blacklist JSON file')
-        self.blacklist_parser.add_argument(
-            '--src', '-s', help='source IP for blacklist')
-        self.blacklist_parser.add_argument(
-            '--srcport', '-p', help='source port for blacklist')
-        self.blacklist_parser.add_argument(
-            '--dst', '-d', help='destination IP for blacklist')
-        self.blacklist_parser.add_argument(
-            '--dstport', '-P', help='destination port for blacklist')
-
-        ## Separate parser for `blacklisted` command
+       
+        # Separate parser for `blacklisted` command
         self.blacklisted_parser = self.subparsers.add_parser(
             'blacklisted', help='process individual blacklist entry')
         self.blacklisted_parser.add_argument(
-            '--dst', '-d', required=False, help='destination IP for blacklist')
+            '--dst', '-d', required=True, help='destination IP for blacklist')
         self.blacklisted_parser.add_argument(
-            '--src', '-s', required=False, help='source IP for blacklist')
+            '--src', '-s', required=True, help='source IP for blacklist')
 
-        ## Add --srcport and --dstport arguments to 'blacklisted' command as
+        # Add --srcport and --dstport arguments to 'blacklisted' command as
         # well
         self.blacklisted_parser.add_argument(
-            '--srcport', '-p', help='source port for blacklist')
+            '--srcport', '-p', required=True, help='source port for blacklist')
         self.blacklisted_parser.add_argument(
-            '--dstport', '-P', help='destination port for blacklist')
-        
-        
+            '--dstport', '-P', required=True, help='destination port for blacklist')
+
         # work from here on for the get functionality
         self.get_parser = self.subparsers.add_parser(
             'get', help='process get command'
         )
-        
+
         # ## here's where the second commands need to be
         # self.get_parser = self.subparsers.add_parser(
         #     'get', help='process get command')
@@ -62,16 +53,16 @@ class CLI:
             '--dst', help='destination IP for get command')
         self.get_parser.add_argument(
             '--dstport', help='destination port for get command')
-        
+
         self.scan_parser = self.subparsers.add_parser(
             'scan', help='scan entire dataset for potential attacks')
         self.scan_parser.add_argument(
-            '--output', '-o', required=True, 
+            '--output', '-o', required=True,
             help='File to which potential attacks should be written')
-        
-        ## thirs question
+
+        # thirs question
         self.time_parser = self.subparsers.add_parser(
-        'time', help='Process time duration thresholds')
+            'time', help='Process time duration thresholds')
 
         self.time_parser.add_argument(
             '--duration',
@@ -86,10 +77,16 @@ class CLI:
             default=300.0,  # Default value of 5 minutes
             help="Duration threshold for TCP connections, in seconds"
         )
-                
+
         self.time_parser.add_argument(
-        '--output', '-o', required=False, 
-        help='File to which times connections are written to')        
-        
+            '--blacklist_file',
+            required=False,
+            help='File that contains blacklisted IP addresses'
+        )
+
+        self.time_parser.add_argument(
+            '--output', '-o', required=False,
+            help='File to which times connections are written to')
+
     def parse_args(self):
         return self.parser.parse_args()

@@ -45,6 +45,12 @@ class DataProcessor:
             timestamp_parts = raw_timestamp.split()
             cleaned_timestamp = ' '.join(timestamp_parts[:4])
             tcp_info['timestamp'] = cleaned_timestamp
+            
+            
+            # calculate pyload length
+            payload_len  = int(tcp_info['tcp.len'])
+            # replaces the field string for int
+            tcp_info['tcp.len'] = payload_len
 
             # Create a TCP connection dictionary and add it to the list
             tcp_connection = {**ip_info, **tcp_info}

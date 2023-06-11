@@ -47,16 +47,13 @@ def main():
             # Compare TCP connections against the blacklist
             blacklisted = processor.compare_blacklist(tcp, blacklist)
 
-
-
             # print results
             print(f"The TCP connection you entered is a marked connection: ")
             print(f"Blacklisted connection: ")
             # check and print blacklisted ips
             processor.check_blacklisted_ips(
                 blacklisted, '../data/blacklisted_ips.json')
-            # bla
-
+          
         else:
             # Error: blacklisted command needs specific connection details
             print(

@@ -142,7 +142,7 @@ class DataProcessor:
             
             flag_value_hex = packet['tcp.flags']
             active_flags = self.decode_tcp_flags(flag_value_hex)
-            attack_name = self.detect_attack(active_flags)
+            attack_name = self.identify_attack_type(active_flags)
             
             # time relative to capture wireshark. One would need to know that.
             print(f"Time: {packet['Timestamps']['tcp.time_relative']}, Flags: {active_flags}, Detected: {attack_name} ")
@@ -173,20 +173,48 @@ class DataProcessor:
         return active_flags
     
     
-    def detect_attack(self, flags):
-        
+    def identify_attack_type(self, flags):
+        flags_set = set(flags)
+      
         attack_map = {
-        frozenset(['SYN', 'FIN']): "SYN-FIN attack",
-        frozenset(['SYN', 'RST']): "SYN-RST attack",
-        frozenset(['SYN', 'URG']): "SYN-URG attack",
-        frozenset(['FIN', 'ACK']): "FIN-ACK attack",
-        frozenset(['FIN', 'PSH', 'URG']): "FIN-PSH-URG attack",
-        frozenset(['PSH', 'URG']): "PSH-URG attack",
-        frozenset(['RST', 'PSH']): "RST-PSH attack",
-        frozenset(['ACK', 'FIN', 'RST']): "ACK-FIN-RST attack",
+            frozenset(['SYN', 'FIN']): "SYN-FIN attack",
+            frozenset(['SYN', 'RST']): "SYN-RST attack",
+            frozenset(['SYN', 'URG']): "SYN-URG attack",
+            frozenset(['FIN', 'ACK']): "Possible FIN-ACK attack",
+            frozenset(['FIN', 'PSH', 'URG']): "FIN-PSH-URG attack",
+            frozenset(['PSH', 'URG']): "PSH-URG attack",
+            frozenset(['RST', 'PSH']): "RST-PSH attack",
+            frozenset(['ACK', 'FIN', 'RST']): "ACK-FIN-RST attack",
+            frozenset(['ACK', 'PSH', 'FIN']): "ACK-PSH-FIN attack",
         }
-        
-        #  check if key is in attack_map
-        attack_name = attack_map.get(frozenset(flags))
-                                     
-        return attack_name
+        for attack_flags, attack_name in attack_map.items():
+            if attack_flags.issubset(flags_set):
+               return attack_name
+        return None
+
+    
+    def scan_dataset_for_attacks(self, data, filename):
+        attack_list = []
+        for packet in data:
+            flag_value_hex = packet['tcp.flags']
+            set_flags = self.decode_tcp_flags(flag_value_hex)
+            connection = (packet['ip.src'], packet['tcp.srcport'], packet['ip.dst'], packet['tcp.dstport'])
+            
+            # skip certain packets
+            if set(set_flags) == {'ACK'}:
+                continue
+            
+            
+            attack_name = self.identify_attack_type(set_flags)
+            
+            if attack_name:
+                # Add details of potential attack to the list
+                attack_data = {
+                    'time': packet['Timestamps']['tcp.time_relative'],
+                    'connection': connection,
+                    'flags': set_flags,
+                    'attack_name': attack_name
+                }
+                attack_list.append(attack_data)    
+                
+        self.write_json(filename, attack_list)

@@ -45,6 +45,7 @@ class CLI:
         )
         
         ## here's where the second commands need to be
+        ## here's where the second commands need to be
         self.get_parser = self.subparsers.add_parser(
             'get', help='process get command')
 
@@ -62,6 +63,12 @@ class CLI:
             '--dst', help='destination IP for get command')
         self.get_parser.add_argument(
             '--dstport', help='destination port for get command')
+        
+        self.scan_parser = self.subparsers.add_parser(
+            'scan', help='scan entire dataset for potential attacks')
+        self.scan_parser.add_argument(
+            '--output', '-o', required=True, 
+            help='File to which potential attacks should be written')
         
         
     def parse_args(self):

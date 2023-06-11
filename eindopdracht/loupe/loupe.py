@@ -24,7 +24,9 @@ def main():
     
     if args.command == 'get' and args.flags:
         processor.get_tcp_flag_changes(args.src, args.srcport, args.dst, args.dstport)
-        
+     
+    if args.command == 'scan':
+        processor.scan_dataset_for_attacks(tcp, args.output)    
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':

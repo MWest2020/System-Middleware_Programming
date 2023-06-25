@@ -42,6 +42,7 @@ def main():
         print(
             f"The following connections are longer than {args.duration_threshold}:")
         print(f"{long_connections}")
+        processor.write_json( args.output, long_connections)
         
 
 

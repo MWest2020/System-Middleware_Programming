@@ -297,9 +297,10 @@ class DataProcessor:
 
     # After initial review @Maarten
     def transform_connections(self, connections):
-        transformed_connections = []
-        for k, v in connections.items():
+        transformed_connections = {}
+        for i, ( k, v ) in enumerate(connections.items()):
             src_ip, src_port, dst_ip, dst_port = k
+            
             new_entry = {
                 "src.ip": src_ip,
                 "src.port": int(src_port),
@@ -307,5 +308,6 @@ class DataProcessor:
                 "dst.port": int(dst_port),
                 "duration": v
             }
-            transformed_connections.append(new_entry)
+            
+            transformed_connections[f'connection_{i}'] = new_entry
         return transformed_connections

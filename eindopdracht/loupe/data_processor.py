@@ -1,5 +1,6 @@
 # standard library to work with json
 from datetime import datetime
+from TcpConnection import TcpConnection
 import json
 import os
 
@@ -24,7 +25,7 @@ class DataProcessor:
 
     # this function takes in a JSON wireshark capture (tested with flood.json)
     def get_tcp_connections(self, data) -> list:
-        # Initialize an empty list to store TCP connections
+    # Initialize an empty list to store TCP connections
         tcp_connections = []
 
         # Iterate through each packet in the dataset
@@ -39,12 +40,20 @@ class DataProcessor:
             cleaned_timestamp = ' '.join(timestamp_parts[:4])
             tcp_info['timestamp'] = cleaned_timestamp
 
-            # Create a TCP connection dictionary and add it to the list
-            tcp_connection = {**ip_info, **tcp_info}
+            # Create a TcpConnection object and add it to the list
+            tcp_connection = TcpConnection(
+                src_ip=ip_info["ip.src"],
+                src_port=tcp_info["tcp.srcport"],
+                dst_ip=ip_info["ip.dst"],
+                dst_port=tcp_info["tcp.dstport"],
+                duration=None,  # We don't know the duration at this point
+                flags=self.decode_tcp_flags(tcp_info['tcp.flags'])
+            )
             tcp_connections.append(tcp_connection)
 
-        # Print the extracted TCP connections
+        # Return the extracted TCP connections
         return tcp_connections
+
 
     # takes in the ouput (tcp connections from the get_tcp_connections function)
     # and processes them into a TCP ID with timestamp

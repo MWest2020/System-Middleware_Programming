@@ -1,0 +1,16 @@
+{
+    "connection_0": {
+        "ip.src": "192.168.0.40",
+        "tcp.srcport": "7138",
+        "ip.dst": "192.168.0.1",
+        "tcp.dstport": "80",
+        "duration": 22.26
+    },
+    "connection_1": {
+        "ip.src": "192.168.0.1",
+        "tcp.srcport": "80",
+        "ip.dst": "192.168.0.40",
+        "tcp.dstport": "7138",
+        "duration": 22.26
+    }
+}

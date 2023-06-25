@@ -80,6 +80,7 @@ Om de duur van TCP-verbindingen te berekenen, kun je de volgende opdracht gebrui
 `python loupe.py dataset.json time --output duration.json`
 
 Dit commando berekent de duur van elke TCP-verbinding in het dataset en slaat de resultaten op in het JSON-bestand `duration.json`.
+> Opmerking: `duration.json` kan worden vervangen door een andere bestandsnaam.
 
 Je kan ook een drempelwaarde instellen om alleen verbindingen met een bepaalde minimale duur op te nemen in de analyse. Bijvoorbeeld:
 

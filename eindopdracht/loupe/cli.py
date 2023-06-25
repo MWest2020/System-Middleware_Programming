@@ -14,7 +14,7 @@ class CLI:
             'blacklist', help='process blacklist')
         self.blacklist_parser.add_argument(
             '--blacklist_file', help='the blacklist JSON file')
-       
+
         # Separate parser for `blacklisted` command
         self.blacklisted_parser = self.subparsers.add_parser(
             'blacklisted', help='process individual blacklist entry')

@@ -1,34 +1,28 @@
 # standard library to work with json
 from datetime import datetime
 import json
-
+import os
 
 class DataProcessor:
 
     # @staticmethod
     def read_json(self, file_path):
-        # reads and returns json data
-        with open("../data/" + file_path, 'r') as f:
+    # reads and returns json data
+        if not os.path.isabs(file_path):
+            file_path = os.path.join("../data/", file_path)
+        with open(file_path, 'r') as f:
             data = json.load(f)
             return data
 
-    # read text file
-    def read_text(self, file_path):
-        with open(file_path, 'r') as f:
-            data = f.readlines(file_path)
-            return data
-
-    # write text file
-    def write_text(self, file_path, data):
-        with open(file_path, 'w') as f:
-            f.write(data)
-
     # Writing json.
     def write_json(self, file_path, json_data):
-        with open('../data/' + file_path, 'w') as f:
+        if not os.path.isabs(file_path):
+            file_path = os.path.join("../data/", file_path)
+        with open(file_path, 'w') as f:
             json.dump(json_data, f, indent=4)
 
-    # this function takes in a JSON wiresark capture (tested with flood.json) 
+
+    # this function takes in a JSON wireshark capture (tested with flood.json)
     def get_tcp_connections(self, data) -> list:
         # Initialize an empty list to store TCP connections
         tcp_connections = []
@@ -45,24 +39,18 @@ class DataProcessor:
             cleaned_timestamp = ' '.join(timestamp_parts[:4])
             tcp_info['timestamp'] = cleaned_timestamp
 
-            # # calculate pyload length
-            # payload_len = int(tcp_info['tcp.len'])
-            # # replaces the field string for int
-            # tcp_info['tcp.len'] = payload_len
-
             # Create a TCP connection dictionary and add it to the list
             tcp_connection = {**ip_info, **tcp_info}
-            # print(f"{tcp_connection}")
             tcp_connections.append(tcp_connection)
 
         # Print the extracted TCP connections
         return tcp_connections
 
-    # takes in the ouput (tcp connections from the get_tcp_connections function)  
-    # and processes them into a TCP ID with timestamp 
-    # and outputs to filepath a JSON 
+    # takes in the ouput (tcp connections from the get_tcp_connections function)
+    # and processes them into a TCP ID with timestamp
+    # and outputs to filepath a JSON
     def get_connection_durations(self, tcp_connections, file_path):
-        connection_times = {} 
+        connection_times = {}
 
         for connection in tcp_connections:
             connection_id = (
@@ -89,9 +77,10 @@ class DataProcessor:
 
         # Calculate the durations
         connection_durations = {
-            # key =  conn_id, with value the later time - earlier time to float in secs
+            # key =  conn_id, with value the later time - earlier time to float
+            # in secs
             conn_id: (times[1] - times[0]).total_seconds()
-            # for each (tuple) pair in the dict  
+            # for each (tuple) pair in the dict
             for conn_id, times in connection_times.items()
         }
 
@@ -104,20 +93,6 @@ class DataProcessor:
             if duration > duration_threshold
         }
         return long_connections
-
-
-    #  scheduled for refactor
-    def correlate_with_blacklist(self, long_connections, blacklist):
-
-        threats = {}
-        for conn_id, duration in long_connections.items():
-            src_ip, src_port, dst_ip, dst_port = conn_id
-            if src_ip in blacklist or dst_ip in blacklist:
-                threats[conn_id] = duration
-        return threats
-    
-    
-    
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []
@@ -207,7 +182,8 @@ class DataProcessor:
         printed_timestamp = False
         for packet in connection_packets:
             if not printed_timestamp:
-                print(f"\nConnections are captured on: {packet['timestamp']} GMT\n")
+                print(
+                    f"\nConnections are captured on: {packet['timestamp']} GMT\n")
                 printed_timestamp = True
 
             flag_value_hex = packet['tcp.flags']
@@ -253,7 +229,8 @@ class DataProcessor:
             frozenset(['SYN', 'RST']): "Anomaly : SYN-RST",
             frozenset(['SYN', 'URG']): "Anomaly : SYN-URG ",
             # may be needed if long streak occurs
-            # frozenset(['FIN', 'ACK']): "Possible FIN-ACK attack, check for previous FIN / RST",
+            # frozenset(['FIN', 'ACK']): "Possible FIN-ACK attack, check for
+            # previous FIN / RST",
             frozenset(['FIN', 'PSH', 'URG']): "Anomaly: FIN-PSH-URG. Possible Christmas Tree",
             frozenset(['RST', 'ACK']): "Check for previous SYN. Possible TCP RST attack.",
             frozenset(['PSH', 'URG']): "Uncommon: PSH-URG",
@@ -299,14 +276,14 @@ class DataProcessor:
 
         self.write_json(filename, attack_list)
 
-
     # After initial review @Maarten
     # this was needed for the output of the connections
+
     def transform_connections(self, connections):
         transformed_connections = {}
-        for i, ( k, v ) in enumerate(connections.items()):
+        for i, (k, v) in enumerate(connections.items()):
             src_ip, src_port, dst_ip, dst_port = k
-            
+
             new_entry = {
                 "ip.src": src_ip,
                 "tcp.srcport": src_port,
@@ -314,25 +291,37 @@ class DataProcessor:
                 "tcp.dstport": dst_port,
                 "duration": v
             }
-            
+
             transformed_connections[f'connection_{i}'] = new_entry
         return transformed_connections
-    
+
     def check_duration_and_blacklist(self, duration_data, blacklist_data):
         blacklisted_connections = {}
 
         # Convert blacklist_data to a set of tuples for faster checking
-        blacklist_set = set((item['ip.src'], item['tcp.srcport'], item['ip.dst'], item['tcp.dstport']) for item in blacklist_data)
+        blacklist_set = set(
+            (item['ip.src'],
+             item['tcp.srcport'],
+                item['ip.dst'],
+                item['tcp.dstport']) for item in blacklist_data)
 
         for connection_id, connection_data in duration_data.items():
             # Convert port numbers to string for comparison
-            connection_data["tcp.srcport"] = str(connection_data["tcp.srcport"])
-            connection_data["tcp.dstport"] = str(connection_data["tcp.dstport"])
-            
-            connection_tuple = (connection_data['ip.src'], connection_data['tcp.srcport'], connection_data['ip.dst'], connection_data['tcp.dstport'])
-            
+            connection_data["tcp.srcport"] = str(
+                connection_data["tcp.srcport"])
+            connection_data["tcp.dstport"] = str(
+                connection_data["tcp.dstport"])
+
+            connection_tuple = (
+                connection_data['ip.src'],
+                connection_data['tcp.srcport'],
+                connection_data['ip.dst'],
+                connection_data['tcp.dstport'])
+
             if connection_tuple in blacklist_set:
                 blacklisted_connections[connection_id] = connection_data
-                print(f"{connection_id} lasted {connection_data['duration']} seconds long and is blacklisted.")
-                
+                print(
+                    f"{connection_id} lasted {connection_data['duration']}",
+                    "seconds long and is blacklisted.")
+
         return blacklisted_connections

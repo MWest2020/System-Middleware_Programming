@@ -20,9 +20,6 @@ def main():
     tcp = processor.get_tcp_connections(capture)
     processor.write_json('tcp_connections.json', tcp)
 
-
-
-
     if args.command == 'get' and args.flags:
         processor.get_tcp_flag_changes(
             args.src, args.srcport, args.dst, args.dstport)
@@ -35,36 +32,33 @@ def main():
             tcp, args.output)
         long_connections = processor.get_long_connections(
             connection_durations, args.duration_threshold)
-        
+
         # tuple to dict for writing to JSON
         long_connections = processor.transform_connections(long_connections)
-        
-        
+
         if len(long_connections) == 0:
-            print(f"No connections longer than {args.duration_threshold} seconds")
-        else:  print(
-            f"The following connections are longer than {args.duration_threshold}:")
-        
-        # Prints the connections and durations. 
+            print(
+                f"No connections longer than {args.duration_threshold} seconds")
+        else:
+            print(
+                f"The following connections are longer than {args.duration_threshold}:")
+
+        # Prints the connections and durations.
         for key, value in long_connections.items():
             print(f"{key} lasted  {value['duration']} seconds long")
 
-
         if args.output:
-            processor.write_json( args.output, long_connections)
-        else :
+            processor.write_json(args.output, long_connections)
+        else:
             processor.write_json('duration.json', long_connections)
-
-
 
         if args.blacklist_file:
             # If a blacklist file is specified, read it
             blacklist_data = processor.read_json(args.blacklist_file)
             duration_data = processor.read_json('duration.json')
-            
-            blacklisted = processor.check_duration_and_blacklist(duration_data, blacklist_data)
-           
-            
+
+            blacklisted = processor.check_duration_and_blacklist(
+                duration_data, blacklist_data)
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':
@@ -129,8 +123,6 @@ def main():
             print(
                 f"Out of {len(tcp)} TCP connections," +
                 f"{len(blacklisted)} connections have blacklisted IP addresses.")
-            # print(f"Blacklisted connections: {blacklisted}")
-
-
+           
 if __name__ == '__main__':
     main()

@@ -105,6 +105,8 @@ class DataProcessor:
         }
         return long_connections
 
+
+    #  scheduled for refactor
     def correlate_with_blacklist(self, long_connections, blacklist):
 
         threats = {}
@@ -113,6 +115,9 @@ class DataProcessor:
             if src_ip in blacklist or dst_ip in blacklist:
                 threats[conn_id] = duration
         return threats
+    
+    
+    
 
     def compare_blacklist(self, connections, blacklist):
         blacklisted_connections = []
@@ -296,18 +301,38 @@ class DataProcessor:
 
 
     # After initial review @Maarten
+    # this was needed for the output of the connections
     def transform_connections(self, connections):
         transformed_connections = {}
         for i, ( k, v ) in enumerate(connections.items()):
             src_ip, src_port, dst_ip, dst_port = k
             
             new_entry = {
-                "src.ip": src_ip,
-                "src.port": int(src_port),
-                "dst.ip": dst_ip,
-                "dst.port": int(dst_port),
+                "ip.src": src_ip,
+                "tcp.srcport": src_port,
+                "ip.dst": dst_ip,
+                "tcp.dstport": dst_port,
                 "duration": v
             }
             
             transformed_connections[f'connection_{i}'] = new_entry
         return transformed_connections
+    
+    def check_duration_and_blacklist(self, duration_data, blacklist_data):
+        blacklisted_connections = {}
+
+        # Convert blacklist_data to a set of tuples for faster checking
+        blacklist_set = set((item['ip.src'], item['tcp.srcport'], item['ip.dst'], item['tcp.dstport']) for item in blacklist_data)
+
+        for connection_id, connection_data in duration_data.items():
+            # Convert port numbers to string for comparison
+            connection_data["tcp.srcport"] = str(connection_data["tcp.srcport"])
+            connection_data["tcp.dstport"] = str(connection_data["tcp.dstport"])
+            
+            connection_tuple = (connection_data['ip.src'], connection_data['tcp.srcport'], connection_data['ip.dst'], connection_data['tcp.dstport'])
+            
+            if connection_tuple in blacklist_set:
+                blacklisted_connections[connection_id] = connection_data
+                print(f"{connection_id} lasted {connection_data['duration']} seconds long and is blacklisted.")
+                
+        return blacklisted_connections

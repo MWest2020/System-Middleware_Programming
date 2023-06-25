@@ -18,8 +18,10 @@ def main():
 
     # Get all connections from the capture
     tcp = processor.get_tcp_connections(capture)
-
     processor.write_json('tcp_connections.json', tcp)
+
+
+
 
     if args.command == 'get' and args.flags:
         processor.get_tcp_flag_changes(
@@ -33,18 +35,27 @@ def main():
             tcp, args.output)
         long_connections = processor.get_long_connections(
             connection_durations, args.duration_threshold)
-
+        
+        # tuple to dict for writing to JSON
+        long_connections = processor.transform_connections(long_connections)
+        
         print(
             f"The following connections are longer than {args.duration_threshold}:")
         print(f"{long_connections}")
+        
+
+
 
         if args.blacklist_file:
             # If a blacklist file is specified, read it
             blacklist = processor.read_json(args.blacklist_file)
+            long_connections = processor.read_json('long_connection.json')
+            print(blacklist)
+            # TODO BELOW DOESN"T WORK
             threats = processor.correlate_with_blacklist(
                 long_connections, blacklist)
-            print(threats)
-            # processor.write_json('potential_threats.json', threats)
+            print(len(threats))
+            processor.write_json('potential_threats.json', threats)
 
     # THIS IS ONLY FOR 1 CONNECTION
     if args.command == 'blacklisted':

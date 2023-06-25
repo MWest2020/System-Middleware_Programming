@@ -293,3 +293,19 @@ class DataProcessor:
                 attack_list.append(attack_data)
 
         self.write_json(filename, attack_list)
+
+
+    # After initial review @Maarten
+    def transform_connections(self, connections):
+        transformed_connections = []
+        for k, v in connections.items():
+            src_ip, src_port, dst_ip, dst_port = k
+            new_entry = {
+                "src.ip": src_ip,
+                "src.port": int(src_port),
+                "dst.ip": dst_ip,
+                "dst.port": int(dst_port),
+                "duration": v
+            }
+            transformed_connections.append(new_entry)
+        return transformed_connections
